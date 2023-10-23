@@ -1,16 +1,6 @@
 {
   "folders": [
     {
-      "id": "aGi5xNyh",
-      "name": "Default",
-      "defaultLanguage": "typescript",
-      "parentId": null,
-      "isOpen": false,
-      "isSystem": false,
-      "createdAt": 1697953837787,
-      "updatedAt": 1697953837787
-    },
-    {
       "name": "Swift",
       "parentId": null,
       "isOpen": false,
@@ -19,6 +9,26 @@
       "id": "vhYiJDpn",
       "createdAt": 1697954702226,
       "updatedAt": 1697954708956
+    },
+    {
+      "name": "Typescript",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "6Xpe1L2B",
+      "createdAt": 1698026648307,
+      "updatedAt": 1698026655069
+    },
+    {
+      "name": "Python",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "Btz7BEVz",
+      "createdAt": 1698026658437,
+      "updatedAt": 1698026670886
     }
   ],
   "snippets": [
@@ -64,17 +74,251 @@
       "folderId": "vhYiJDpn",
       "tagsIds": [],
       "description": null,
-      "name": "test",
+      "name": "Swift GCD",
       "content": [
         {
           "label": "Fragment 1",
           "language": "swift",
-          "value": "let oq = \"aaaa\""
+          "value": "//임의의 큐\nDispatchQueue(label: \"kr.swifter.app.queue\").async {\t\n   selft.doSomething()\n}\n\n//메인 큐\nDispatchQueue.main.async {\n  self.doSomething()\n}\n\n//시스템에서 준비된 큐\nDispatchQueue.global(qos: .default).async {\n   self.doSomething()\n}\n\n// 지정한 시간 후 처리\nDispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(10)) {\n   self.doSomething()\n}\n\n// 모든 큐 처리 끝나면 특정작업 실행\nlet g = DispatchGroup()\nlet q1 = DispatchQueue(label: \"kr.swifter.app.queue1\")\nlet q2 = DispatchQueue(label: \"kr.swifter.app.queue2\")\nlet q3 = DispatchQueue(label: \"kr.swifter.app.queue3\")\n\nq1.async(group: g) {\n   print(\"queue1 완료\")\n}\n\nq2.async(group: g) {\n   print(\"queue2 완료\")\n}\n\nq3.async(group: g) {\n   print(\"queue3 완료\")\n}\n\ng.notify(queue: DispatchQueue.main) {\n   print(\"전체 작업완료\")\n}"
         }
       ],
       "id": "Tz6BSl58",
       "createdAt": 1697954730310,
-      "updatedAt": 1697954756651
+      "updatedAt": 1698027125969
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "if / for",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "# for if 문 예제\nlanguages = ['python', 'perl', 'c', 'java']\nfor lang in languages:\n    if lang in ['python', 'perl']:\n        print(\"%6s need interpreter\" % lang)\n    elif lang in ['c', 'java']:\n        print(\"%6s need compiler\" % lang)\n    else:\n        print(\"should not reach here\")\n        \n# 단순 빈복문\nfor i in range(2,10):"
+        }
+      ],
+      "id": "5cO3DrSF",
+      "createdAt": 1698026772919,
+      "updatedAt": 1698026803214
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "연사자",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "3 ** 4\t# 제곱 연산자\n>> 81\n\n7 / 4 # 1.75\n7 // 4 # 1"
+        }
+      ],
+      "id": "Vy-pMLWM",
+      "createdAt": 1698026814634,
+      "updatedAt": 1698026843021
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "문자열",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "# 문자열 더하기\nhead = \"Python\"\ntail = \" is fun!\"\nhead + tail # 'Python is fun!'\n\n# 문자열 곱하기\na = \"python\"\na * 2 # 'pythonpython'\n\n# 문자열 길이 구하기\na = \"Life is too short\"\nlen(a) # 17\n\n# 문자열 인덱싱\na = \"Life is too short, You need Python\"\na[0] # 'L'\na[-1] # 'n' 뒤에서부터 가져옴\na[0:4] # 'Life' == a[:4]\n\n# 문자열 포매팅\n\"I eat %d apples.\" % 3 # 'I eat 3 apples.'\n# 그냥 %s로 해도 다 된다!\n\n# 향상된 포매팅\n\"I eat {0} apples\".format(3) # 'I eat 3 apples'\n\"I ate {0} apples. so I was sick for {1} days.\".format(number, day)\n\"I ate {number} apples. so I was sick for {day} days.\".format(number=10, day=3)\n# 'I ate 10 apples. so I was sick for three days.'\n\n# 문자 개수 세기\na = \"hobby\"\na.count('b') # 2\n\n# 위치 알려주기\na = \"Python is the best choice\"\na.find('b') # 14\na.find('k') # -1 존재하지 않을 경우\n\n# 문자열 삽입\n\",\".join('abcd') # 'a,b,c,d'\t== \",\".join(['a', 'b', 'c', 'd'])\n\n# 공백 지우기\na.strip()\n\n# 문자열 바꾸기\na = \"Life is too short\"\na.replace(\"Life\", \"Your leg\") # 'Your leg is too short'\n\n# 문자열 나누기\na = \"Life is too short\"\na.split() # ['Life', 'is', 'too', 'short']\nb = \"a:b:c:d\"\nb.split(':') # ['a', 'b', 'c', 'd']"
+        }
+      ],
+      "id": "zqNJqlNJ",
+      "createdAt": 1698026860122,
+      "updatedAt": 1698026870660
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "배열",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "a = [1, 2, 3]\nb = [4, 5, 6]\na + b # [1, 2, 3, 4, 5, 6]\na * 3 # [1, 2, 3, 1, 2, 3, 1, 2, 3]\n\n# 길이 구하기\nlen(a) # 3\n\n# 요소 삭제\ndel a[1] # [1, 3]\ndel a[1:] # [1]\na = [1, 2, 3, 1, 2, 3]\na.remove(3)\t# [1, 2, 1, 2, 3] 3번째 삭제\n\n# 요소 추가\na.append(4) # [1, 2, 3, 4]\n\n# 요소 삽입\na.insert(0, 4) # [4, 1, 2, 3]\n\n# 요소 pop\na = [1,2,3]\na.pop() # 3\na # [1, 2]\na.pop(1) # 1\na # [2]\n\n# 정렬\n.sort() # 숫자 문자 정렬 가능\n.reverse() # 순서 뒤집기\n\n# 값 위치 찾기\na = [1,2,3]\na.index(3) # 2\n\n# 확장하기\na = [1,2,3]\na.extend([4,5]) # [1, 2, 3, 4, 5]\n\n# check if element exist in list using 'in'\nif 'at' in listOfStrings :\n    print(\"Yes, 'at' found in List : \" , listOfStrings)"
+        }
+      ],
+      "id": "rfOY0zwh",
+      "createdAt": 1698026900683,
+      "updatedAt": 1698026908253
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "딕셔너리",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}\nlist(a.keys()) # ['name', 'phone', 'birth']\nfor k in a.keys(): \n  print(k)\n \na.values()\t# 값 리스트\n\n# 키 밸류 쌍 얻기\na.items() # [('name', 'pey'), ('phone', '0119993323'), ('birth', '1118')]\n\n# 전부 지우기\na.clear()"
+        }
+      ],
+      "id": "_aRfhxr0",
+      "createdAt": 1698026915831,
+      "updatedAt": 1698026925470
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "함수",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "def add(a, b): \n    return a + b\n  \n# 입력값이 여러개일 경우\ndef add_many(*args): \n     result = 0 \n     for i in args: \n         result = result + i \n     return result \n  \n# 초기값 미리 설정하기 가능\ndef say_myself(name, old, man=True): \n \n# 함수 내에서 전역변수 사용하기\nresult = 0\ndef add(num):\n    global result\n    result += num\n    return result\n\nprint(add(3))\t# 3\nprint(add(4))\t# 7"
+        }
+      ],
+      "id": "cj5ch5AS",
+      "createdAt": 1698026935346,
+      "updatedAt": 1698026941929
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "클래스",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "class FourCal:\n  def setdata(self, first, second):\n    self.first = first\n    self.second = second\n    \n  def add(self):\n    result = self.first + self.second\n    return result\n  \na = FourCal()\na.setdata(4, 2)\nprint(a.add()) # 6\n\n# 여기서 객체를 생성한 다음에 바로 setdata없이 add를 호출하게 되면 에러가 발생한다\n# 생성자를 추가하면 해결된다\ndef __init__(self, first, second):\n  self.first = first\n  self.second = second\n  \n# 클래스 상속\nclass MoreFourCal(FourCal):"
+        }
+      ],
+      "id": "itdDNQ9a",
+      "createdAt": 1698026948059,
+      "updatedAt": 1698026954392
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "모듈화",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "# mod1.py ################################\ndef add(a, b):\n    return a + b\n\ndef sub(a, b): \n    return a-b\n  \n##########################################\n\nfrom mod1 import add, sub\t# 이렇게하면 모듈 이름없이 바로 접근할 수 있다.\nfrom mod1 import *\nadd(3, 4) # 7\n\n# if __name__ == \"__main__\" 을 사용하면 해당 모듈을 직접 실행할때만 타게된다"
+        }
+      ],
+      "id": "akAn-vCv",
+      "createdAt": 1698027000713,
+      "updatedAt": 1698027007275
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Btz7BEVz",
+      "tagsIds": [],
+      "description": null,
+      "name": "Scheduler",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "import schedule \nimport time \ndef job_second(): \n    print(\"I'm working...every second\") \n    \ndef job_minute(): \n    print(\"I'm working...every minute\") \n    \ndef job_hour(): \n    print(\"I'm working...every hour\") \n    \ndef job_day(): \n    print(\"I'm working...every day\") \n    \ndef job_monday(): \n    print(\"I'm working...every monday\") \n    \ndef job_wednesday(): \n    print(\"I'm working...every wednesday\") \n    \n# # 10초에 한번씩 실행 \nschedule.every(10).seconds.do(job_second) \n\n# # 10분에 한번씩 실행 \nschedule.every(10).minutes.do(job_minute) \n\n# # 매 시간 실행 \nschedule.every().hours.do(job_hour) \n\n# # 매일 10:30 에 실행 \nschedule.every().days.at(\"10:30\").do(job_day) \n\n# # 매주 월요일 실행 \nschedule.every().monday.do(job_monday) \n\n# # 매주 수요일 13:15 에 실행 \nschedule.every().wednesday.at(\"13:15\").do(job_wednesday) \n\nwhile True: \n    schedule.run_pending() \n    time.sleep(1)"
+        }
+      ],
+      "id": "1adAZRES",
+      "createdAt": 1698027016442,
+      "updatedAt": 1698027030891
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "6Xpe1L2B",
+      "tagsIds": [],
+      "description": null,
+      "name": "Type",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "// number\nconst integer: number = 1;\n\n// string\nconst myName: string = 'Lee Jin';\n\n// boolean\nconst isTypeScriptAwesome: boolean = true;\n\n// array\nconst myArray: Array<number> = [1, 2 ,3, 4, 5, 6];\nconst myArray2: number[] = [1, 2, 3, 4, 5, 6];\n\n// 튜플 - 튜플 타입 변수는 정확히 명시된 개수 만큼의 원소만을 가질 수 있다.\nconst myArray3: [string, number] = ['홍길동', 145];\n\n// 사용자 정의 타입\ntype Human = {\n    name: string;\n    age: number;\n    address?: string; // ?는 해당 속성이 존재하지 않을 수도 있다는 것을 명시\n};"
+        }
+      ],
+      "id": "WDa-FBaB",
+      "createdAt": 1698027170848,
+      "updatedAt": 1698027226112
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "6Xpe1L2B",
+      "tagsIds": [],
+      "description": null,
+      "name": "인터페이스",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "interface Life {\n  name: string;\n  readonly sex: string; // 읽기 전용 속성\n  weight?: number; // 선택 속성 \n}\n\nconst cat: Life = { name: '길냥이', sex: 'male' }; // ok\n\n// error TS2540: Cannot assign to 'sex' because it is a constant or a read-only property.\ncat.sex = 'female';\n\ninterface GetLife {\n    (uuid: UUID): Life;\n}\n\nconst getLife: GetLife = function (u) {\n    const dog: Life = { name: '홍길동', sex: 'female', weight: 30 };\n    return dog;\n}"
+        }
+      ],
+      "id": "4m3uAM6y",
+      "createdAt": 1698027243335,
+      "updatedAt": 1698027260609
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "6Xpe1L2B",
+      "tagsIds": [],
+      "description": null,
+      "name": "클래스",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "class Base {\n    static num: number = 0; // 스태틱 변수\n    \n    // 스태틱 메소드\n    static incrementNum() {\n        Base.num += 1;\n    }\n\n    baseProps: number; // 클래스 변수\n    \n    // 생성자\n    constructor() {\n        this.baseProps = 123;\n    }\n}\n\nclass MyCustom extends Base {\n    private extendsProps: number = 0;\n    constructor() {\n        super();\n        this.extendsProps = 456;\n    }\n}\n\nconst myCustom: MyCustom = new MyCustom();\nconsole.log(Base.num); // 0\n\nconsole.log(myCustom.baseProps); // 123\nconsole.log(myCustom.extendsProps) // 456"
+        }
+      ],
+      "id": "207GFrsO",
+      "createdAt": 1698027264400,
+      "updatedAt": 1698027277492
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "6Xpe1L2B",
+      "tagsIds": [],
+      "description": null,
+      "name": "for",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "let arr = [10, 20, 30, 40];\n\nfor (var val of arr) {\n  console.log(val); // prints values: 10, 20, 30, 40\n}\n\nfor (var index in arr) {\n  console.log(index); // prints indexes: 0, 1, 2, 3\n\n  console.log(arr[index]); // prints elements: 10, 20, 30, 40\n}"
+        }
+      ],
+      "id": "ovTThpJ5",
+      "createdAt": 1698027301000,
+      "updatedAt": 1698027314144
     }
   ],
   "tags": []
