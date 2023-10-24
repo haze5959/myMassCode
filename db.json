@@ -29,6 +29,16 @@
       "id": "Btz7BEVz",
       "createdAt": 1698026658437,
       "updatedAt": 1698026670886
+    },
+    {
+      "name": "\bMarkdown",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "Vx9GQppL",
+      "createdAt": 1698138350377,
+      "updatedAt": 1698138360386
     }
   ],
   "snippets": [
@@ -38,17 +48,17 @@
       "folderId": "",
       "tagsIds": [],
       "description": null,
-      "name": "test",
+      "name": "바코드 시음노트",
       "content": [
         {
           "label": "Fragment 1",
-          "language": "plain_text",
-          "value": "test oq"
+          "language": "markdown",
+          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 첫 리뷰이면 많은 점수 획득\n- 리뷰를 할수록 점수가 높아지고 순위가 높아진다\n- 팔로우 기능도 제공\n\n## 기술 스택\n- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)"
         }
       ],
       "id": "QzSjpbSJ",
       "createdAt": 1697953982822,
-      "updatedAt": 1697953990847
+      "updatedAt": 1698139980875
     },
     {
       "isDeleted": true,
@@ -319,6 +329,24 @@
       "id": "ovTThpJ5",
       "createdAt": 1698027301000,
       "updatedAt": 1698027314144
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Vx9GQppL",
+      "tagsIds": [],
+      "description": null,
+      "name": "총정리",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "# 제목 1\n## 제목 2\n### 제목 3\n#### 제목 4\n##### 제목 5\n###### 제목 6\n\n이텔릭체는 *별표(asterisks)* 혹은 _언더바(underscore)_를 사용하세요.\n두껍게는 **별표(asterisks)** 혹은 __언더바(underscore)__를 사용하세요.\n**_이텔릭체_와 두껍게**를 같이 사용할 수 있습니다.\n취소선은 ~~물결표시(tilde)~~를 사용하세요.\n<u>밑줄</u>은 `<u></u>`를 사용하세요.\n\n[GOOGLE](https://google.com)\n\n![대체 텍스트(alternative text)를 입력하세요!](http://www.gstatic.com/webp/gallery/5.jpg \"링크 설명(title)을 작성하세요.\")\n\n```bash\n$ vim ./~zshrc\n```\n\n> 남의 말이나 글에서 직접 또는 간접으로 따온 문장.\n> _(네이버 국어 사전)_\n\n***\n(Asterisks)"
+        }
+      ],
+      "id": "zA1Uylnk",
+      "createdAt": 1698138362992,
+      "updatedAt": 1698138658615
     }
   ],
   "tags": []
