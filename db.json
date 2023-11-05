@@ -347,6 +347,78 @@
       "id": "zA1Uylnk",
       "createdAt": 1698138362992,
       "updatedAt": 1698138658615
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vhYiJDpn",
+      "tagsIds": [],
+      "description": null,
+      "name": "Cuncurrency",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "swift",
+          "value": "// Task\nTask.detached(priority: .background) {\n    await DirectoryCleaner.cleanup()\n}"
+        }
+      ],
+      "id": "3E7QPvZV",
+      "createdAt": 1698459863901,
+      "updatedAt": 1698459906831
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vhYiJDpn",
+      "tagsIds": [],
+      "description": null,
+      "name": "SwiftUI",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "swift",
+          "value": ""
+        }
+      ],
+      "id": "PY2kWa7L",
+      "createdAt": 1698459912424,
+      "updatedAt": 1698459925393
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "",
+      "tagsIds": [],
+      "description": null,
+      "name": "Untitled snippet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "```mermaid\nclassDiagram\n\nProduct <|-- Note : barcode_id\nUser <|-- Note : barcode_id\n\nclass Product {\n\t+Int barcode_id\n  +String name\n}\n\nclass Note {\n\t+Int id\n\t+Int barcode_id\n}\n\nclass User {\n\t+Int id\n  +Int user_id\n  +String nick_name\n}\n```"
+        }
+      ],
+      "id": "1SK7IU5F",
+      "createdAt": 1698460168612,
+      "updatedAt": 1698461188454
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "Vx9GQppL",
+      "tagsIds": [],
+      "description": null,
+      "name": "Mermaid",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "[Mermaid Intro](http://mermaid.js.org/intro/)\n\n## classDiagram Ex\n```mermaid\nclassDiagram\nClass01 <|-- AveryLongClass : Cool\nClass03 *-- Class04\nClass05 o-- Class06\nClass07 .. Class08\nClass09 --> C2 : Where am i?\nClass09 --* C3\nClass09 --|> Class07\nClass07 : equals()\nClass07 : Object[] elementData\nClass01 : size()\nClass01 : int chimp\nClass01 : int gorilla\nClass08 <--> C2: Cool label\n```"
+        }
+      ],
+      "id": "qazQh5bo",
+      "createdAt": 1698460492515,
+      "updatedAt": 1698460583321
     }
   ],
   "tags": []
