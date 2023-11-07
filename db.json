@@ -390,17 +390,17 @@
       "folderId": "",
       "tagsIds": [],
       "description": null,
-      "name": "Untitled snippet",
+      "name": "ERD",
       "content": [
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "```mermaid\nclassDiagram\n\nProduct <|-- Note : barcode_id\nUser <|-- Note : barcode_id\n\nclass Product {\n\t+Int barcode_id\n  +String name\n}\n\nclass Note {\n\t+Int id\n\t+Int barcode_id\n}\n\nclass User {\n\t+Int id\n  +Int user_id\n  +String nick_name\n}\n```"
+          "value": "```mermaid\nerDiagram\n    PRODUCT ||--|{ NOTE : barcode_id\n    PRODUCT ||--|{ FAVORITE : barcode_id\n    PRODUCT ||--|{ PRODUCT_IMAGE : barcode_id\n    \n    USER ||--|{ FAVORITE : user_id\n    USER ||--|{ NOTE : user_id\n    \n    NOTE ||--|{ PRODUCT_IMAGE : note_id\n        \n    PRODUCT {\n        int barcode_id PK\n        string name\n    }\n    \n    NOTE {\n        int id PK\n        int user_id\n\t\t\t\tint barcode_id\n        string body\n        date registered\n    }\n    \n    USER {\n        int id PK\n  \t\t\tint user_id\n  \t\t\tstring nick_name\n    }\n\n    FAVORITE {\n    \t\tint barcode_id\n  \t\t\tint user_id\n    }\n    \n    PRODUCT_IMAGE {\n    \t\tint id PK\n        int barcode_id\n        int note_id\n    }\n```"
         }
       ],
       "id": "1SK7IU5F",
       "createdAt": 1698460168612,
-      "updatedAt": 1698461188454
+      "updatedAt": 1699336254971
     },
     {
       "isDeleted": false,
