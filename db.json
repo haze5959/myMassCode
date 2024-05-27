@@ -39,6 +39,16 @@
       "id": "Vx9GQppL",
       "createdAt": 1698138350377,
       "updatedAt": 1698138360386
+    },
+    {
+      "name": "Rust",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "qzhsCzAb",
+      "createdAt": 1715057451358,
+      "updatedAt": 1715057456316
     }
   ],
   "snippets": [
@@ -53,12 +63,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n- 서버 Deno\n- [DB Deno KV](https://docs.deno.com/kv/tutorials)\n- 스토리지 서버 파어이베이스 클라우드 스토리지\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t도수, 향, 주종, 설명등의 간단한 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n\t댓글도 표시\n- 네비게이션바는 없고 바로 홈화면\n- 홈화면: QR 플로팅 버튼과 오른쪽 상단 마이메뉴\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기 (만원)"
+          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n- 서버 Deno\n- [DB Deno KV](https://docs.deno.com/kv/tutorials)\n- 스토리지 서버 파어이베이스 클라우드 스토리지\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t도수, 향, 주종, 설명등의 간단한 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n\t댓글도 표시\n- 네비게이션바는 없고 바로 홈화면\n- 홈화면: QR 플로팅 버튼과 오른쪽 상단 마이메뉴\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기 (만원)\n- 개발자 맥주 사주기 (5천원)"
         }
       ],
       "id": "QzSjpbSJ",
       "createdAt": 1697953982822,
-      "updatedAt": 1698407274339
+      "updatedAt": 1701146962390
     },
     {
       "isDeleted": true,
@@ -419,6 +429,42 @@
       "id": "qazQh5bo",
       "createdAt": 1698460492515,
       "updatedAt": 1698460583321
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Foundation",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "// Array\nlet mut array: [i32; 3] = [0; 3];\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// This loop prints: 0 1 2\nfor x in array {\n    print!(\"{x} \");\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);"
+        }
+      ],
+      "id": "gIOH9xzE",
+      "createdAt": 1715057458775,
+      "updatedAt": 1715057712037
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Struct Trait",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "//trait 인터페이스\ntrait SpecialType {\n    fn do_special_work(&mut self) -> String;\n    fn dump(&self);\n}\n\n// 구조체\nstruct SomeGoodSpecial {\n    name: String,\n}\n\n// 구현체\nimpl SpecialType for SomeGoodSpecial {\n    fn do_special_work(&mut self) -> String {\n        self.name.push_str(\" Worker\");\n        String::from(format!(\"{}\", self.name))\n    }\n\n    fn dump(&self) {\n        println!(\"Current my name is {}\", self.name);\n    }\n}"
+        }
+      ],
+      "id": "Y0I0Ik5I",
+      "createdAt": 1715069217527,
+      "updatedAt": 1715069316891
     }
   ],
   "tags": []
