@@ -63,12 +63,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n- 서버 Vapor\n\t- ORM: Fluent\n- DB postgreSQL\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t도수, 향, 주종, 설명등의 간단한 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n\t댓글도 표시\n  \n### UI 디자인\n- 홈화면: 네비게이션바 가운데에 QR 버튼\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기 (만원)\n- 개발자 맥주 사주기 (5천원)"
+          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n- 서버 Vapor\n\t- ORM: Fluent\n- DB postgreSQL\n- 디자인\n\t- Creatie: AI 디자인 툴\n  https://www.youtube.com/watch?v=bI7ZfJMi6Pk\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t도수, 향, 주종, 설명등의 간단한 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n\t댓글도 표시\n  \n### UI 디자인\n- 홈화면: 네비게이션바 가운데에 QR 버튼\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기 (만원)\n- 개발자 맥주 사주기 (5천원)"
         }
       ],
       "id": "QzSjpbSJ",
       "createdAt": 1697953982822,
-      "updatedAt": 1722590073478
+      "updatedAt": 1726552838631
     },
     {
       "isDeleted": true,
@@ -405,12 +405,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "```mermaid\nerDiagram\n    <!-- 관계 -->\n    PRODUCT ||--|{ NOTE : barcode_id\n    PRODUCT ||--|{ FAVORITE : barcode_id\n    PRODUCT ||--|{ PRODUCT_IMAGE : barcode_id\n    \n    USER ||--|{ FAVORITE : user_id\n    USER ||--|{ NOTE : user_id\n    \n    NOTE ||--|{ PRODUCT_IMAGE : note_id\n\n\t\t<!-- 테이블 -->\n    PRODUCT {\n        int barcode_id PK\n        string name\n    }\n    \n    NOTE {\n        int id PK\n        int user_id\n\t\t\t\tint barcode_id\n        string body\n        date registered\n    }\n    \n    USER {\n        int id PK\n  \t\t\tint user_id\n  \t\t\tstring nick_name\n    }\n\n    FAVORITE {\n    \t\tint barcode_id\n  \t\t\tint user_id\n    }\n    \n    PRODUCT_IMAGE {\n    \t\tint id PK\n        int barcode_id\n        int note_id\n    }\n```"
+          "value": "```mermaid\nerDiagram\n    <!-- 관계 -->\n    PRODUCT ||--|{ NOTE : \"barcode_id\"\n    PRODUCT ||--|{ FAVORITE : \"barcode_id(DELETE CASCADE)\"\n    PRODUCT ||--|{ PRODUCT_IMAGE : \"barcode_id(DELETE CASCADE)\"\n    \n    USER ||--|{ FAVORITE : user_id\n    USER ||--|{ NOTE : user_id\n    \n    NOTE ||--|{ PRODUCT_IMAGE : note_id\n\n\t\t<!-- 테이블 -->\n    PRODUCT {\n        uuid barcode_id PK\n        string name\n    }\n    \n    NOTE {\n        uuid id PK\n        uuid user_id\n\t\t\t\tuuid barcode_id\n        string body\n        date registered\n    }\n    \n    USER {\n  \t\t\tuuid user_id PK\n  \t\t\tstring nick_name\n    }\n\n    FAVORITE {\n    \t\tuuid id PK\n    \t\tuuid barcode_id\n  \t\t\tuuid user_id\n    }\n    \n    PRODUCT_IMAGE {\n    \t\tuuid id PK\n        uuid barcode_id\n        uuid note_id\n    }\n```"
         }
       ],
       "id": "1SK7IU5F",
       "createdAt": 1698460168612,
-      "updatedAt": 1721981822871
+      "updatedAt": 1726556579472
     },
     {
       "isDeleted": false,
@@ -465,6 +465,42 @@
       "id": "Y0I0Ik5I",
       "createdAt": 1715069217527,
       "updatedAt": 1715069316891
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "",
+      "tagsIds": [],
+      "description": null,
+      "name": "API",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "# 공통 규칙\n## common response model\n```json\n// success\n{\n\t\"result\": true,\n\t\"data\": data model\n}\n\n// fail\n{\n\t\"result\": false,\n\t\"error\": {\n\t\t\"code\": 9999,\n\t\t\"msg\": \"unknown\"\n\t}\n}\n```\n\n# users\n## post\n### path: users/\n- body\n\t- User model\n- response data\n\t- User model\n\n## get\n### path: users/:id\n### path: users/:nick_name\n- response data\n\t- User model\n\n## put\n### path: users/:id\n- body\n```json\n{\"nick_name\": \"nick name\"}\n```\n\n## delete\n\n# products\n## post\n## get\n## put\n## delete\n\n# notes\n## post\n## get\n## put\n## delete"
+        }
+      ],
+      "id": "TNLZBaE9",
+      "createdAt": 1726580854639,
+      "updatedAt": 1726593760435
+    },
+    {
+      "isDeleted": true,
+      "isFavorites": false,
+      "folderId": "",
+      "tagsIds": [],
+      "description": null,
+      "name": "Untitled snippet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": ""
+        }
+      ],
+      "id": "-NJfntp1",
+      "createdAt": 1726584274937,
+      "updatedAt": 1726584298366
     }
   ],
   "tags": []
