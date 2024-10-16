@@ -441,12 +441,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "// Array\nlet mut array: [i32; 3] = [0; 3];\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// This loop prints: 0 1 2\nfor x in array {\n    print!(\"{x} \");\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);"
+          "value": "// String\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// This loop prints: 0 1 2\nfor x in array {\n    print!(\"{x} \");\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);"
         }
       ],
       "id": "gIOH9xzE",
       "createdAt": 1715057458775,
-      "updatedAt": 1715057712037
+      "updatedAt": 1728959960233
     },
     {
       "isDeleted": false,
