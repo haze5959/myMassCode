@@ -531,12 +531,12 @@
         {
           "label": "Fragment 1",
           "language": "swift",
-          "value": "/* \nhttps://developer.apple.com/videos/play/wwdc2024/10179/\n기존 유닛 테스트와의 차별점\n1. validation에 관한 결과가 더 디테일해짐\n2. 테스트 함수들이 좀 더 사용하기 유연해짐(더 간편해짐)\n3. 기존에 못하던 것이 가능해짐\n- 테스트 중도 중지\n- 테스트 순차적 진행\n*/\n\n\n// 테스트 메서드 생성\n@Test(\"이 문구는 테스트 네비게이터에 나와\") func gogoTest() {\n\t// Validate\n\t#expect([1, 2, 3].count == 3)\n  \n  // #expect와 다른점은 테스트 중도 중지\n  #require([1, 2, 3].count == 3)\n}\n\n// 테스트 함수 선언은 여러 방식으로 가능함\n@Test(.bug(\"example.com/issue/999\", \"title\"))\n@Test(.tags(.critical))\n@Test(.enabled(if: true))\n@Test(.timeLimit(.minutes(3))\n@Test(.arguments: [\"aaa\", \"bbb\"])\n@Suite(.serialized)\n\n// 테스트 그룹\nstruct TestGroup01 {\n\t@Test func testA {}\n}"
+          "value": "/* \nhttps://developer.apple.com/videos/play/wwdc2024/10179/\nhttps://developer.apple.com/documentation/testing/migratingfromxctest\n기존 유닛 테스트와의 차별점\n1. validation에 관한 결과가 더 디테일해짐\n2. 테스트 함수들이 좀 더 사용하기 유연해짐(더 간편해짐)\n3. 기존에 못하던 것이 가능해짐\n- 테스트 중도 중지\n- 테스트 순차적 진행\n*/\n\n\n// 테스트 메서드 생성\n@Test(\"이 문구는 테스트 네비게이터에 나와\") func gogoTest() {\n\t// Validate\n\t#expect([1, 2, 3].count == 3)\n  \n  // #expect와 다른점은 테스트 중도 중지\n  #require([1, 2, 3].count == 3)\n}\n\n// 테스트 함수 선언은 여러 방식으로 가능함\n@Test(.bug(\"example.com/issue/999\", \"title\"))\n@Test(.tags(.critical))\n@Test(.enabled(if: true))\n@Test(.timeLimit(.minutes(3))\n@Test(.arguments: [\"aaa\", \"bbb\"])\n@Suite(.serialized)\t// 그룹에 이용됨\n\n// 로그 기록\nIssue.record(\"Engine is not electric\")\n\n// 테스트 그룹\nstruct TestGroup01 {\n\t@Test func testA {}\n}\n\n// 클로저 함수 대기\nawait confirmation(\"…\") { soldFood in\n    FoodTruck.shared.eventHandler = { event in\n        if case .soldFood = event {\n        \tsoldFood()\n        }\n    }\n\tawait Customer().buy(.soup)\n}"
         }
       ],
       "id": "OR0VIob3",
       "createdAt": 1729662350399,
-      "updatedAt": 1729667401077
+      "updatedAt": 1730013517000
     }
   ],
   "tags": []
