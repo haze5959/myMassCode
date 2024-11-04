@@ -369,12 +369,12 @@
         {
           "label": "Fragment 1",
           "language": "swift",
-          "value": "// Task\nTask.detached(priority: .background) {\n    await DirectoryCleaner.cleanup()\n}"
+          "value": "// 현재 task의 context에 의존적이지 않은 작업 생성\nTask.detached(priority: .background) {\n    await DirectoryCleaner.cleanup()\n}\n\n// 여러 작업 한번에 로딩하기\nfunc fetchThumbnails(for ids: [String]) async throws -> [String: UIImage] {\n    var thumbnails: [String: UIImage] = [:]\n    try await withThrowingTaskGroup(of: (String, UIImage).self) { group in\n        for id in ids {\n            group.async {\n            \t\t// 여기서 바로 thumbnails에 값 넣으면 안되는게\n                // 딕셔너리는 Sendable하지 않기 때문\n                return (id, try await fetchOneThumbnail(withID: id))\n            }\n        }\n\n        for try await (id, thumbnail) in group {\n            thumbnails[id] = thumbnail\n        }\n    }\n    return thumbnails\n}\n\n// 작업 캔슬시키기\nfunc collectionView(_ view: UICollectionView, \n                    willDisplay cell: UICollectionViewCell, \n                    forItemAt item: IndexPath) {\n    let ids = getThumbnailIDs(for: item)\n    thumbnailTasks[item] = Task {\n        defer { thumbnailTasks[item] = nil }\n        let thumbnails = await fetchThumbnails(for: ids)\n        display(thumbnails, in: cell)\n    }\n}\n\nfunc collectionView(_ view: UICollectionView, \n                    didEndDisplay cell: UICollectionViewCell, \n                    forItemAt item: IndexPath) {\n    thumbnailTasks[item]?.cancel()\n}"
         }
       ],
       "id": "3E7QPvZV",
       "createdAt": 1698459863901,
-      "updatedAt": 1698459906831
+      "updatedAt": 1730733795521
     },
     {
       "isDeleted": false,
@@ -537,6 +537,24 @@
       "id": "OR0VIob3",
       "createdAt": 1729662350399,
       "updatedAt": 1730013517000
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vhYiJDpn",
+      "tagsIds": [],
+      "description": null,
+      "name": "ShortCut",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "Cmd+Opt+/ = 주석 빨리치기"
+        }
+      ],
+      "id": "ourjs4Sn",
+      "createdAt": 1730727414509,
+      "updatedAt": 1730727492862
     }
   ],
   "tags": []
