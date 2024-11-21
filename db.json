@@ -387,12 +387,12 @@
         {
           "label": "Fragment 1",
           "language": "swift",
-          "value": "GroupBox"
+          "value": "GroupBox\n\n// GeometryReader로 뷰 크기 디버깅하기\nText(\"Hello, world. This is a longer text.\")\n    .overlay {\n        GeometryReader { proxy in\n            Text(\n                \"\\(proxy.size.width) x \\(proxy.size.height)\"\n            )\n                .font(.caption)\n                .foregroundStyle(.white)\n                .padding(4)\n                .background { Color.purple }\n                .fixedSize()\n                .frame(width: proxy.size.width,\n                       height: proxy.size.height)\n        }\n    }"
         }
       ],
       "id": "PY2kWa7L",
       "createdAt": 1698459912424,
-      "updatedAt": 1727409995656
+      "updatedAt": 1732093564858
     },
     {
       "isDeleted": false,
