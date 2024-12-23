@@ -573,6 +573,24 @@
       "id": "pPL5RtTE",
       "createdAt": 1730102384061,
       "updatedAt": 1732093140750
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vhYiJDpn",
+      "tagsIds": [],
+      "description": null,
+      "name": "OBJ-C Snipet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "objectivec",
+          "value": "// 시작 시간 기록\nNSDate *startTime = [NSDate date];\n\n// 끝 시간 기록\nNSDate *endTime = [NSDate date];\n\n// 밀리세컨드로 시간 차이 계산\nNSTimeInterval timeInterval = [endTime timeIntervalSinceDate:startTime];\nNSLog(@\"Elapsed time: %.3f milliseconds\", timeInterval * 1000);"
+        }
+      ],
+      "id": "0C6eAfry",
+      "createdAt": 1733123521703,
+      "updatedAt": 1733123604206
     }
   ],
   "tags": []
