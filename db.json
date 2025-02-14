@@ -49,6 +49,16 @@
       "id": "qzhsCzAb",
       "createdAt": 1715057451358,
       "updatedAt": 1715057456316
+    },
+    {
+      "name": "\bC++",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "amHWqhN6",
+      "createdAt": 1738891284934,
+      "updatedAt": 1738891294406
     }
   ],
   "snippets": [
@@ -63,12 +73,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- 서버 Vapor\n\t- ORM: Fluent\n  - DB postgreSQL\n  - 인증: Auth0\n  \t- 7500 MAU까지만 무료\n  - 클라우드: AWS Lightsail\n  \t- 월 5달러정도\n- 클라이언트\n\t- iOS\n  \t- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n    - Tuist\n- 디자인\n\t- Creatie: AI 디자인 툴\n  https://www.youtube.com/watch?v=bI7ZfJMi6Pk\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t주종, 도수, 당도, 산도 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n- 노트에는 향, 당도, 산도, 바디, 타닌 설명\n\t댓글도 표시\n  \n### UI 디자인\n- 홈화면: 네비게이션바 가운데에 QR 버튼\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도, 바디, 타닌 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n- 잘못된 정보 신고 기능\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기\n\t- 구독제 월(천원티어)\n  - 구독제 년(만원티어)\n- 개발자 맥주 사주기 (5천원)"
+          "value": "# 바코드 시음노트\n\n## 아이디어\n- 바코드 인식을 이용한 빠른 시음노트\n- 바코드는 유니크한 값이므로 남이 작성한 정보가 이미 있으면 빠른 작성 가능\n- 팔로우 기능도 제공\n\n## 기술 스택\n- 서버 rust [Actix](https://actix.rs/)\n\t- https://medium.com/@johannesfloriangeiger/securing-a-rust-api-with-auth0-494b407be020\n  - https://github.com/hatoo/auth0-rust-starter\n\t- ORM: [Diesel](https://github.com/diesel-rs/diesel)\n  \t- [예제](https://github.com/actix/examples/tree/master/databases/diesel)\n  - DB postgreSQL\n  - 인증: Auth0\n  \t- 7500 MAU까지만 무료\n  - 클라우드: AWS Lightsail\n  \t- 월 5달러정도\n- 클라이언트\n\t- iOS\n  \t- [TCA 패턴](https://velog.io/@flamozzi/TCAThe-Composable-Architecture-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-SwiftUI-Sample-App-%EC%A0%9C%EC%9E%91-%EC%86%8C%EA%B0%90)\n    - Tuist\n- 디자인\n\t- Creatie: AI 디자인 툴\n  https://www.youtube.com/watch?v=bI7ZfJMi6Pk\n\n## 디테일\n- 로그인은 카카오(한국), 구글, 애플 로그인만 제공 (MVP에서는 애플 로그인만 제공)\n- 바코드를 찍으면 바로 상세정보(누가 등록을 이미 했다면)로 이동\n\t주종, 도수, 당도, 산도 정보들이 보이며 최종 별점과 괄호에 별점 매겨진 횟수 표시\n- 노트에는 향, 당도, 산도, 바디, 타닌 설명\n\t댓글도 표시\n  \n### UI 디자인\n- 홈화면: 네비게이션바 가운데에 QR 버튼\n\t1. 피드\n  2. 새로 등록된 주종\n  \n- 마이메뉴: 알림, 설정, 팔로워/팔로윙 관리, 내 프로필 관리, 내 시음노트 히스토리, 좋아요 리스트\n- 등록정보 화면: 당도, 산도, 바디, 타닌 등등은 전부 모든 데이터의 평균값으로 나옴\n- 등록하기 화면:\n\t\n  \n## MVP 이후에 구현할 목록\n- 바코드가 없는 주류 등록 기능\n- 푸시, 알림\n- 잘못된 정보 신고 기능\n\n\n## 수익구조\n- Admob 배너광고\n- 광고 없애기\n\t- 구독제 월(천원티어)\n  - 구독제 년(만원티어)"
         }
       ],
       "id": "QzSjpbSJ",
       "createdAt": 1697953982822,
-      "updatedAt": 1727256368529
+      "updatedAt": 1737605845622
     },
     {
       "isDeleted": true,
@@ -387,12 +397,12 @@
         {
           "label": "Fragment 1",
           "language": "swift",
-          "value": "GroupBox\n\n// GeometryReader로 뷰 크기 디버깅하기\nText(\"Hello, world. This is a longer text.\")\n    .overlay {\n        GeometryReader { proxy in\n            Text(\n                \"\\(proxy.size.width) x \\(proxy.size.height)\"\n            )\n                .font(.caption)\n                .foregroundStyle(.white)\n                .padding(4)\n                .background { Color.purple }\n                .fixedSize()\n                .frame(width: proxy.size.width,\n                       height: proxy.size.height)\n        }\n    }"
+          "value": "https://www.swiftuifieldguide.com/\n\nGroupBox\n\n// 인스타 느낌 배열\nLazyVGrid\n\n// GeometryReader로 뷰 크기 디버깅하기\nText(\"Hello, world. This is a longer text.\")\n    .overlay {\n        GeometryReader { proxy in\n            Text(\n                \"\\(proxy.size.width) x \\(proxy.size.height)\"\n            )\n                .font(.caption)\n                .foregroundStyle(.white)\n                .padding(4)\n                .background { Color.purple }\n                .fixedSize()\n                .frame(width: proxy.size.width,\n                       height: proxy.size.height)\n        }\n    }\n \n // alignmentGuide로 정렬 세부 조정하기\n.overlay(alignment: .topTrailing) {\n        MyBadge()\n            .alignmentGuide(.top) { dim in\n                dim.height / 2\n            }\n            .alignmentGuide(.trailing) { dim in\n                dim.width / 2\n            }\n    }\n    \n// Custom Shapes\nstruct Checkmark: Shape {\n  func path(in rect: CGRect) -> Path {\n    Path { p in\n      p.move(to: .init(x: rect.minX, y: rect.midY))\n      p.addLine(to: .init(x: rect.minX + rect.size.width / 2, y: rect.maxY))\n      p.addLine(to: .init(x: rect.maxX, y: rect.minY))\n    }\n  }\n  \n  func sizeThatFits(_ proposal: ProposedViewSize) -> CGSize {\n    let p = proposal.replacingUnspecifiedDimensions()\n    let length = min(p.width, p.height)\n    return .init(width: length, height: length)\n  }\n}"
         }
       ],
       "id": "PY2kWa7L",
       "createdAt": 1698459912424,
-      "updatedAt": 1732093564858
+      "updatedAt": 1735017027288
     },
     {
       "isDeleted": false,
@@ -441,12 +451,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "// String\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// This loop prints: 0 1 2\nfor x in array {\n    print!(\"{x} \");\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);"
+          "value": "https://tourofrust.com/\nhttps://www.slideshare.net/slideshow/momenti-seminar-a-tour-of-rust-part-1/250379437\nhttps://www.slideshare.net/utilforever/momenti-seminar-a-tour-of-rust-part-2\n\n// 기본 개념\nlet mut(mutable) 넣으면 변경 가능한 값\n없으면 기본적으로 read-only\n\nconst PI: f32 = 3.14159;\t// 상수\n\n// 자료형\n부울 값 - 참/거짓 값을 나타내는 bool\n부호가 없는 정수형 - 양의 정수를 나타내는 u8 u16 u32 u64 u128\n부호가 있는 정수형 - 양/음의 정수를 나타내는 i8 i16 i32 i64 i128\n포인터 사이즈 정수 - 메모리에 있는 값들의 인덱스와 크기를 나타내는 usize isize\n부동 소수점 - f32 f64\n튜플(tuple) - stack에 있는 값들의 고정된 순서를 전달하기 위한 (값, 값, ...)\n배열(array) - 컴파일 타임에 정해진 길이를 갖는 유사한 원소들의 모음(collection)인 [값, 값, ...]\n슬라이스(slice) - 런타임에 길이가 정해지는 유사한 원소들의 collection\nstr(문자열 slice) - 런타임에 길이가 정해지는 텍스트\nString - 문자열, str과 다름, 다양한 메서드 제공\n\nlet c = 4.3f32; // 이런식으로 숫자 뒤에 자료형을 붙여 표현 가능\n\n// 자료형 변환\nlet a = 13u8;\nlet b = 7u32;\nlet c = a as u32 + b;\n\nlet a = 42;\nlet a_string = a.to_string();\nlet b = a_string.parse::<i32>()?;\n\n// String\nlet s = String::from(\"Hello\");\nlet slice: &str = &s;  // `String`에서 `&str`로 슬라이스를 생성\nslice.to_string()\t// 다시 슬라이스로 변환\n// r#으로 시작해서 #으로 끝나면 원시 문자열\nlet a: &'static str = r#\"\n        <div class=\"advice\">\n            원시 문자열은 일부 상황에서 유용합니다.\n        </div>\n        \"#;\n// slice\nlet first_word = &a[0..2];\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\t// i32는 원소의 자료형, 3은 컴파일 타임에 주어지는 고정된 길이\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// 가변 어레이(Vector)\nlet mut i32_vec = Vec::<i32>::new(); \ni32_vec.push(1);\ni32_vec.push(2);\n// or\nlet i32_vec = vec![i32::from(1), i32::from(2)];\nfor word in i32_vec.iter() {\n\tprintln!(\"{}\", word);\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 함수\nfn swap(x: i32, y: i32) -> (i32, i32) {\n    return (y, x);\n}\n\n// 블록 표현\nlet result = match food {\n        \"핫도그\" => \"핫도그다\",\n        // 리턴문 하나 뿐이라면 중괄호는 필수가 아님\n        _ => \"핫도그가 아니다\",\n    };\n\nlet v = {\n  // 이 범위 블록은 함수 범위를 더럽히지 않고 값을 가져오게 해준다\n  let a = 1;\n  let b = 2;\n  a + b\n};\n\n스태틱 메소드(static methods) - 자료형 그 자체에 속하는 메소드로서, :: 연산자를 이용하여 호출함.\nlet s = String::from(\"Hello world!\");\n\n인스턴스 메소드(instance methods) - 자료형의 인스턴스에 속하는 메소드로서, . 연산자를 이용하여 호출함.\nprintln!(\"{}의 글자 수는 {}입니다.\", s, s.len());\n\n// 소유권 대여하기\nlet f = &foo;\nlet f = &mut foo;\t// foo가 mutable하다면\nlet bar = *f; // owner의 값의 복사본을 가져옴\n*f = 13; // 참조의 owner의 값을 설정함\n\nlet a: &'static str = \"hi 🦀\";\t// static 선언하기\n\n// Box\nBox는 stack에 있는 데이터를 heap으로 옮길 수 있게 해주는 데이터 구조입니다.\nBox는 smart pointer로도 알려진 struct이며 heap에 있는 데이터를 가리키는 포인터를 들고 있습니다."
         }
       ],
       "id": "gIOH9xzE",
       "createdAt": 1715057458775,
-      "updatedAt": 1728959960233
+      "updatedAt": 1737683008871
     },
     {
       "isDeleted": false,
@@ -459,12 +469,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "//trait 인터페이스\ntrait SpecialType {\n    fn do_special_work(&mut self) -> String;\n    fn dump(&self);\n}\n\n// 구조체\nstruct SomeGoodSpecial {\n    name: String,\n}\n\n// 구현체\nimpl SpecialType for SomeGoodSpecial {\n    fn do_special_work(&mut self) -> String {\n        self.name.push_str(\" Worker\");\n        String::from(format!(\"{}\", self.name))\n    }\n\n    fn dump(&self) {\n        println!(\"Current my name is {}\", self.name);\n    }\n}"
+          "value": "//trait 인터페이스\ntrait SpecialType {\n    fn do_special_work(&mut self) -> String;\n    fn dump(&self);\n}\n\n// 구조체\nstruct SomeGoodSpecial {\n    name: String,\n}\n\n// 튜플형 구조체\nstruct Location(i32, i32);\nlet loc = Location(42, 32);\nprintln!(\"{}, {}\", loc.0, loc.1);\n\n// 제네릭\nstruct BagOfHolding<T> {\n    item: T,\n}\nlet i32_bag = BagOfHolding::<i32> { item: 42 };\n\nfn generic_make_noise<T>(creature: &T) where T: NoiseMaker, {\n    // 컴파일 타임에 실제 자료형을 알게 됩니다\n    creature.make_noise();\n}\n// 위 제네릭 함수를 줄여쓰기\nfn generic_make_noise(creature: &impl NoiseMaker) {\n    // 컴파일 타임에 실제 자료형을 알게 됩니다\n    creature.make_noise();\n}\n\n// 익스텐션 같은 쓰임\nimpl SpecialType for SomeGoodSpecial {\n    fn do_special_work(&mut self) -> String {\n        self.name.push_str(\" Worker\");\n        String::from(format!(\"{}\", self.name))\n    }\n\n    fn dump(&self) {\n        println!(\"Current my name is {}\", self.name);\n    }\n}"
         }
       ],
       "id": "Y0I0Ik5I",
       "createdAt": 1715069217527,
-      "updatedAt": 1715069316891
+      "updatedAt": 1737682987408
     },
     {
       "isDeleted": false,
@@ -591,6 +601,114 @@
       "id": "0C6eAfry",
       "createdAt": 1733123521703,
       "updatedAt": 1733123604206
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "\b반복문",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "// 반복문\n// This loop prints: 0 1 2\nfor x in array {\n    print!(\"{x} \");\n}\n\nfor x in 0..5 {\n\tprintln!(\"{}\", x);\n}\n\nfor x in 0..=5 {\n\tprintln!(\"{}\", x);\n}\n\nloop {\n  x += 1;\n  if x == 2 {\n  \tbreak;\n  }\n}\n\n// loop에서 값 리턴하기\nlet v = loop {\n        x += 1;\n        if x == 13 {\n            break \"13 찾았다\";\n        }\n    };\n\nwhile x != 2 {\n\tx += 1;\n}"
+        }
+      ],
+      "id": "EXNae0bM",
+      "createdAt": 1737453674757,
+      "updatedAt": 1737453949667
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "조건문",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "let x = 42;\n\nmatch x {\n  0 => {\n  \tprintln!(\"0 발견\");\n  }\n  // 여러 개 값과 대조할 수 있다\n  1 | 2 => {\n  \tprintln!(\"1 또는 2 발견!\");\n  }\n  // 범위로 대조할 수 있다\n  3..=9 => {\n  \tprintln!(\"3에서 9까지의 숫자 발견\");\n  }\n  // 찾은 숫자를 변수에 바인딩할 수 있다\n  matched_num @ 10..=100 => {\n  \tprintln!(\"10에서 100까지의 숫자 {} 발견!\", matched_num);\n  }\n  // 모든 케이스가 처리되지 않았을 경우 반드시 존재해야 하는 기본 match\n  _ => {\n  \tprintln!(\"뭔가 다른거 발견!\");\n  }\n}\n\n// enum\nenum Species {\n    Crab,\n    Octopus,\n    Fish,\n    Clam,\n}\nenum PoisonType {\n    Acidic,\n    Painful,\n    Lethal,\n}\nenum Size {\n    Big,\n    Small,\n}\nenum Weapon {\n    Claw(i32, Size),\n    Poison(PoisonType),\n    None,\n}\n\nstruct SeaCreature {\n    species: Species,\n    name: String,\n    arms: i32,\n    legs: i32,\n    weapon: Weapon,\n}\n\n// SeaCreature의 데이터는 stack에 있음\nlet ferris = SeaCreature {\n  // String struct도 stack에 있지만,\n  // heap에 있는 데이터에 대한 참조를 갖고 있음\n  species: Species::Crab,\n  name: String::from(\"Ferris\"),\n  arms: 2,\n  legs: 4,\n  weapon: Weapon::Claw(2, Size::Small),\n};\n\nmatch ferris.species {\n  Species::Crab => match ferris.weapon {\n    Weapon::Claw(num_claws, size) => {\n    \tlet size_description = match size {\n        Size::Big => \"큰\",\n        Size::Small => \"작은\",\n      };\n      println!(\n        \"ferris는 {}개의 {} 집게를 가진 게이다\",\n        num_claws, size_description\n      )\n    }\t\n    _ => println!(\"ferris는 다른 무기를 가진 게이다\"),\n\t},\n\t_ => println!(\"ferris는 다른 동물이다\"),\n}\n\n// 3항 연산 표현\nlet v = if x < 42 { -1 } else { 1 };"
+        }
+      ],
+      "id": "PzMhY2xa",
+      "createdAt": 1737453778420,
+      "updatedAt": 1737454861888
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "ETC",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "#![allow(dead_code)] // 이 줄은 컴파일러 경고를 방지해줌\n\n// nullable 표현하기\nstruct BagOfHolding {\n    item: Option<T>,\n}\n\n// 결과 표현하기\nfn do_something_that_might_fail(i: i32) -> Result<f32, String> {\n    if i == 42 {\n        Ok(13.0)\n    } else {\n        Err(String::from(\"맞는 숫자가 아닙니다\"))\n    }\n}\n\nfn main() -> Result<(), String> {\n\t\t//아래것과 같은 동작\n    match do_something_that_might_fail() {\n        Ok(v) => println!(\"{} 발견\", v),\n        Err(e) => return Err(e),\n    }\n    // 얼마나 코드를 줄였는지 보세요!\n    let v = do_something_that_might_fail(42)?;\n    println!(\"{} 발견\", v);\n    Ok(())\n    // 이것두!\n    do_something_that_might_fail(42).ok_or(\"fail\")\n}\n\n// 파일에서 문자열 가져오기\nlet 00_html = include_str!(\"00_ko.html\");\n\n// 스마트 포인터\nBox<T>\t힙 메모리에 데이터를 저장하는 단순한 스마트 포인터\nRc<T>\t여러 개의 소유자를 가질 수 있는 참조 카운팅(Reference Counting) 스마트 포인터 (단일 스레드용)\t// 주로 다음과같이 사용: Rc<Vec<Foo>>\nArc<T>\t멀티 스레드 환경에서 안전하게 사용할 수 있는 원자적 참조 카운팅(Atomic Reference Counting)\nRefCell<T>\t내부 가변성을 제공하는 스마트 포인터 (런타임에 가변성 체크) (mut는 단일 소유자지만 이건 여러 소유자 가능)\t// 주로 다음과같이 사용: Rc<RefCell<Foo>>\nMutex<T>\t멀티 스레드에서 데이터를 안전하게 보호하는 락(lock) 기반 동기화 스마트 포인터\t// 주로 다음과같이 사용: Arc<Mutex<Foo>>\nRwLock<T>: 여러 스레드가 읽기 가능, 한 스레드만 쓰기 가능 (Mutex<T>는 한 번에 하나의 스레드만 데이터를 읽거나 쓸 수 있음.)\n\nMutex\t// 쓰레드간 자원 독점 사용\nlet mutex_pie = Mutex::new(Pie);\n// 파이에 대한 잠겨있는 immutable한 참조를 빌려봅시다\n// lock은 실패할 수도 있기 때문에 그 결과는 unwrap 해야합니다\nlet ref_pie = mutex_pie.lock().unwrap();\nref_pie.eat();"
+        }
+      ],
+      "id": "JLhDyde9",
+      "createdAt": 1737454571967,
+      "updatedAt": 1738313131208
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "\b라이브버리 작성하기",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "library는 lib.rs라 불리는 파일에 root module을 갖고 있습니다.\n\n// 이 macro는 Rust가 테스트 모드가 아닐 경우\n// 이 inline module을 제거합니다.\n#[cfg(test)]\nmod tests {\n    // 부모 module에 즉시 접근이 가능하지 않다는 데에 주의하세요.\n    // 반드시 명시적으로 써줘야 합니다.\n    use super::*;\n\n    ... tests go here ...\n}\n\n// 내부 모듈 참조하기\ncrate - root module\nsuper - 현재 module의 부모 module\nself - 현재 module\n\n// Prelude\nuse로 가져오지도 않았는데 어떻게 어디서나 Vec나 Box를 쓸 수 있는지 궁금하실지도 모르겠습니다. 이는 standard library의 prelude module 덕분\nhttps://velog.io/@wjddlstn0614/Rust-Prelude"
+        }
+      ],
+      "id": "TdeRy_EO",
+      "createdAt": 1738303592238,
+      "updatedAt": 1738310069035
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "uniFFI",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "https://mozilla.github.io/uniffi-rs/latest/Getting_started.html"
+        }
+      ],
+      "id": "02OnSP4H",
+      "createdAt": 1738310218722,
+      "updatedAt": 1738310859484
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "amHWqhN6",
+      "tagsIds": [],
+      "description": null,
+      "name": "Foundation",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": ""
+        }
+      ],
+      "id": "3hQkhzl4",
+      "createdAt": 1738891302587,
+      "updatedAt": 1738891309393
     }
   ],
   "tags": []
