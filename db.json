@@ -31,14 +31,14 @@
       "updatedAt": 1698026670886
     },
     {
-      "name": "\bMarkdown",
+      "name": "Markdown",
       "parentId": null,
       "isOpen": false,
       "isSystem": false,
       "defaultLanguage": "plain_text",
       "id": "Vx9GQppL",
       "createdAt": 1698138350377,
-      "updatedAt": 1698138360386
+      "updatedAt": 1739510232054
     },
     {
       "name": "Rust",
@@ -51,14 +51,24 @@
       "updatedAt": 1715057456316
     },
     {
-      "name": "\bC++",
+      "name": "C++",
       "parentId": null,
       "isOpen": false,
       "isSystem": false,
       "defaultLanguage": "plain_text",
       "id": "amHWqhN6",
       "createdAt": 1738891284934,
-      "updatedAt": 1738891294406
+      "updatedAt": 1739510237311
+    },
+    {
+      "name": "IDE",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "vs7wRccf",
+      "createdAt": 1741158132683,
+      "updatedAt": 1741158141476
     }
   ],
   "snippets": [
@@ -451,12 +461,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "https://tourofrust.com/\nhttps://www.slideshare.net/slideshow/momenti-seminar-a-tour-of-rust-part-1/250379437\nhttps://www.slideshare.net/utilforever/momenti-seminar-a-tour-of-rust-part-2\n\n// 기본 개념\nlet mut(mutable) 넣으면 변경 가능한 값\n없으면 기본적으로 read-only\n\nconst PI: f32 = 3.14159;\t// 상수\n\n// 자료형\n부울 값 - 참/거짓 값을 나타내는 bool\n부호가 없는 정수형 - 양의 정수를 나타내는 u8 u16 u32 u64 u128\n부호가 있는 정수형 - 양/음의 정수를 나타내는 i8 i16 i32 i64 i128\n포인터 사이즈 정수 - 메모리에 있는 값들의 인덱스와 크기를 나타내는 usize isize\n부동 소수점 - f32 f64\n튜플(tuple) - stack에 있는 값들의 고정된 순서를 전달하기 위한 (값, 값, ...)\n배열(array) - 컴파일 타임에 정해진 길이를 갖는 유사한 원소들의 모음(collection)인 [값, 값, ...]\n슬라이스(slice) - 런타임에 길이가 정해지는 유사한 원소들의 collection\nstr(문자열 slice) - 런타임에 길이가 정해지는 텍스트\nString - 문자열, str과 다름, 다양한 메서드 제공\n\nlet c = 4.3f32; // 이런식으로 숫자 뒤에 자료형을 붙여 표현 가능\n\n// 자료형 변환\nlet a = 13u8;\nlet b = 7u32;\nlet c = a as u32 + b;\n\nlet a = 42;\nlet a_string = a.to_string();\nlet b = a_string.parse::<i32>()?;\n\n// String\nlet s = String::from(\"Hello\");\nlet slice: &str = &s;  // `String`에서 `&str`로 슬라이스를 생성\nslice.to_string()\t// 다시 슬라이스로 변환\n// r#으로 시작해서 #으로 끝나면 원시 문자열\nlet a: &'static str = r#\"\n        <div class=\"advice\">\n            원시 문자열은 일부 상황에서 유용합니다.\n        </div>\n        \"#;\n// slice\nlet first_word = &a[0..2];\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\t// i32는 원소의 자료형, 3은 컴파일 타임에 주어지는 고정된 길이\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// 가변 어레이(Vector)\nlet mut i32_vec = Vec::<i32>::new(); \ni32_vec.push(1);\ni32_vec.push(2);\n// or\nlet i32_vec = vec![i32::from(1), i32::from(2)];\nfor word in i32_vec.iter() {\n\tprintln!(\"{}\", word);\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 함수\nfn swap(x: i32, y: i32) -> (i32, i32) {\n    return (y, x);\n}\n\n// 블록 표현\nlet result = match food {\n        \"핫도그\" => \"핫도그다\",\n        // 리턴문 하나 뿐이라면 중괄호는 필수가 아님\n        _ => \"핫도그가 아니다\",\n    };\n\nlet v = {\n  // 이 범위 블록은 함수 범위를 더럽히지 않고 값을 가져오게 해준다\n  let a = 1;\n  let b = 2;\n  a + b\n};\n\n스태틱 메소드(static methods) - 자료형 그 자체에 속하는 메소드로서, :: 연산자를 이용하여 호출함.\nlet s = String::from(\"Hello world!\");\n\n인스턴스 메소드(instance methods) - 자료형의 인스턴스에 속하는 메소드로서, . 연산자를 이용하여 호출함.\nprintln!(\"{}의 글자 수는 {}입니다.\", s, s.len());\n\n// 소유권 대여하기\nlet f = &foo;\nlet f = &mut foo;\t// foo가 mutable하다면\nlet bar = *f; // owner의 값의 복사본을 가져옴\n*f = 13; // 참조의 owner의 값을 설정함\n\nlet a: &'static str = \"hi 🦀\";\t// static 선언하기\n\n// Box\nBox는 stack에 있는 데이터를 heap으로 옮길 수 있게 해주는 데이터 구조입니다.\nBox는 smart pointer로도 알려진 struct이며 heap에 있는 데이터를 가리키는 포인터를 들고 있습니다."
+          "value": "https://tourofrust.com/\nhttps://www.slideshare.net/slideshow/momenti-seminar-a-tour-of-rust-part-1/250379437\nhttps://www.slideshare.net/utilforever/momenti-seminar-a-tour-of-rust-part-2\n\n// 기본 개념\nlet mut(mutable) 넣으면 변경 가능한 값\n없으면 기본적으로 read-only\n\nconst PI: f32 = 3.14159;\t// 상수\n\n// 자료형\n부울 값 - 참/거짓 값을 나타내는 bool\n부호가 없는 정수형 - 양의 정수를 나타내는 u8 u16 u32 u64 u128\n부호가 있는 정수형 - 양/음의 정수를 나타내는 i8 i16 i32 i64 i128\n포인터 사이즈 정수 - 메모리에 있는 값들의 인덱스와 크기를 나타내는 usize isize\n부동 소수점 - f32 f64\n튜플(tuple) - stack에 있는 값들의 고정된 순서를 전달하기 위한 (값, 값, ...)\n배열(array) - 컴파일 타임에 정해진 길이를 갖는 유사한 원소들의 모음(collection)인 [값, 값, ...]\n슬라이스(slice) - 런타임에 길이가 정해지는 유사한 원소들의 collection\nstr(문자열 slice) - 런타임에 길이가 정해지는 텍스트\nString - 문자열, str과 다름, 다양한 메서드 제공\n\nlet c = 4.3f32; // 이런식으로 숫자 뒤에 자료형을 붙여 표현 가능\n\n// 자료형 변환\nlet a = 13u8;\nlet b = 7u32;\nlet c = a as u32 + b;\n\nlet a = 42;\nlet a_string = a.to_string();\nlet b = a_string.parse::<i32>()?;\n\n// String\nlet s = String::from(\"Hello\");\nlet slice: &str = &s;  // `String`에서 `&str`로 슬라이스를 생성\nslice.to_string()\t// 다시 슬라이스로 변환\n// r#으로 시작해서 #으로 끝나면 원시 문자열\nlet a: &'static str = r#\"\n        <div class=\"advice\">\n            원시 문자열은 일부 상황에서 유용합니다.\n        </div>\n        \"#;\n// slice\nlet first_word = &a[0..2];\n// 인터폴레이션\nformat!(\"Hello, my name is {} and I am {} years old.\", name, age);\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\t// i32는 원소의 자료형, 3은 컴파일 타임에 주어지는 고정된 길이\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// 가변 어레이(Vector)\nlet mut i32_vec = Vec::<i32>::new(); \ni32_vec.push(1);\ni32_vec.push(2);\n// or\nlet i32_vec = vec![i32::from(1), i32::from(2)];\nfor word in i32_vec.iter() {\n\tprintln!(\"{}\", word);\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 함수\nfn swap(x: i32, y: i32) -> (i32, i32) {\n    return (y, x);\n}\n\n// 블록 표현\nlet result = match food {\n        \"핫도그\" => \"핫도그다\",\n        // 리턴문 하나 뿐이라면 중괄호는 필수가 아님\n        _ => \"핫도그가 아니다\",\n    };\n\nlet v = {\n  // 이 범위 블록은 함수 범위를 더럽히지 않고 값을 가져오게 해준다\n  let a = 1;\n  let b = 2;\n  a + b\n};\n\n스태틱 메소드(static methods) - 자료형 그 자체에 속하는 메소드로서, :: 연산자를 이용하여 호출함.\nlet s = String::from(\"Hello world!\");\n\n인스턴스 메소드(instance methods) - 자료형의 인스턴스에 속하는 메소드로서, . 연산자를 이용하여 호출함.\nprintln!(\"{}의 글자 수는 {}입니다.\", s, s.len());\n\n// 소유권 대여하기\nlet f = &foo;\nlet f = &mut foo;\t// foo가 mutable하다면\nlet bar = *f; // owner의 값의 복사본을 가져옴\n*f = 13; // 참조의 owner의 값을 설정함\n\nlet a: &'static str = \"hi 🦀\";\t// static 선언하기\n\n// Box\nBox는 stack에 있는 데이터를 heap으로 옮길 수 있게 해주는 데이터 구조입니다.\nBox는 smart pointer로도 알려진 struct이며 heap에 있는 데이터를 가리키는 포인터를 들고 있습니다."
         }
       ],
       "id": "gIOH9xzE",
       "createdAt": 1715057458775,
-      "updatedAt": 1737683008871
+      "updatedAt": 1740034266851
     },
     {
       "isDeleted": false,
@@ -608,7 +618,7 @@
       "folderId": "qzhsCzAb",
       "tagsIds": [],
       "description": null,
-      "name": "\b반복문",
+      "name": "반복문",
       "content": [
         {
           "label": "Fragment 1",
@@ -618,7 +628,7 @@
       ],
       "id": "EXNae0bM",
       "createdAt": 1737453674757,
-      "updatedAt": 1737453949667
+      "updatedAt": 1739510248337
     },
     {
       "isDeleted": false,
@@ -662,7 +672,7 @@
       "folderId": "qzhsCzAb",
       "tagsIds": [],
       "description": null,
-      "name": "\b라이브버리 작성하기",
+      "name": "라이브러리 작성하기",
       "content": [
         {
           "label": "Fragment 1",
@@ -672,7 +682,7 @@
       ],
       "id": "TdeRy_EO",
       "createdAt": 1738303592238,
-      "updatedAt": 1738310069035
+      "updatedAt": 1740034061627
     },
     {
       "isDeleted": false,
@@ -702,13 +712,49 @@
       "content": [
         {
           "label": "Fragment 1",
-          "language": "plain_text",
-          "value": ""
+          "language": "c_cpp",
+          "value": "enum class EType : uint8\n{\n\tType1,\n\tType2\n};\n\n// 싱글톤 함수 만들기\nclass FEditorStyle\n{\npublic:\n    static TSharedPtr<FEditorStyle> Get()\n    {\n        if (!Singleton.IsValid())\n        {\n            Singleton = MakeShareable(new FEditorStyle());\n        }\n        return Singleton;\n    }\n\nprivate:\n    static TSharedPtr<FEditorStyle> Singleton;\n};\n"
         }
       ],
       "id": "3hQkhzl4",
       "createdAt": 1738891302587,
-      "updatedAt": 1738891309393
+      "updatedAt": 1741159041439
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "amHWqhN6",
+      "tagsIds": [],
+      "description": null,
+      "name": "Ureal",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "c_cpp",
+          "value": "// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)"
+        }
+      ],
+      "id": "GQVV2Beh",
+      "createdAt": 1739510270922,
+      "updatedAt": 1741237660731
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vs7wRccf",
+      "tagsIds": [],
+      "description": null,
+      "name": "Visual Studio",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "자동정렬: Control + K + F"
+        }
+      ],
+      "id": "BDImCtMp",
+      "createdAt": 1741158143478,
+      "updatedAt": 1741158182370
     }
   ],
   "tags": []
