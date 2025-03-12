@@ -767,12 +767,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "// Diesel\n\n// 스키마 DB 읽어서 자동 생성\ndiesel print-schema > src/schema.rs\n\n\ndiesel migration run 명령어 알아보기!!\n무서워서 일단은 안쓸예정"
+          "value": "// Diesel\n\n// 스키마 DB 읽어서 자동 생성\ndiesel print-schema > src/schema.rs\n\n\ndiesel migration run 명령어 알아보기!!\n무서워서 일단은 안쓸예정\nhttps://github.com/atanmarko/rust-diesel-examples\n이거 참고하면 좋을듯"
         }
       ],
       "id": "0jTCz0bG",
       "createdAt": 1741783210694,
-      "updatedAt": 1741783225444
+      "updatedAt": 1741784803510
     },
     {
       "isDeleted": false,
@@ -791,6 +791,24 @@
       "id": "Y3L6Scxa",
       "createdAt": 1741783227712,
       "updatedAt": 1741783240259
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vs7wRccf",
+      "tagsIds": [],
+      "description": null,
+      "name": "VSCode",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "정렬: Shift(⇧) + Option(⌥) + F"
+        }
+      ],
+      "id": "3D5hK6_x",
+      "createdAt": 1741783375666,
+      "updatedAt": 1741783396440
     }
   ],
   "tags": []
