@@ -726,7 +726,7 @@
       "folderId": "amHWqhN6",
       "tagsIds": [],
       "description": null,
-      "name": "Ureal",
+      "name": "Unreal",
       "content": [
         {
           "label": "Fragment 1",
@@ -736,7 +736,7 @@
       ],
       "id": "GQVV2Beh",
       "createdAt": 1739510270922,
-      "updatedAt": 1741237660731
+      "updatedAt": 1741783205318
     },
     {
       "isDeleted": false,
@@ -755,6 +755,42 @@
       "id": "BDImCtMp",
       "createdAt": 1741158143478,
       "updatedAt": 1741158182370
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Actix & Diesel",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "// Diesel\n\n// 스키마 DB 읽어서 자동 생성\ndiesel print-schema > src/schema.rs\n\n\ndiesel migration run 명령어 알아보기!!\n무서워서 일단은 안쓸예정"
+        }
+      ],
+      "id": "0jTCz0bG",
+      "createdAt": 1741783210694,
+      "updatedAt": 1741783225444
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Life Cycle",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "// 'a는 라이프타임(Lifetime) 매개변수\npub struct NewUser<'a> {\n    pub first_name: &'a str,\n    pub last_name: &'a str,\n    pub email: &'a str,\n    pub created_at: chrono::NaiveDateTime,\n}\n// 이 구조체는 'a 라이프타임 동안 유효함\n\t•\tRust는 메모리 안정성을 보장하기 위해, 소유권(Ownership)과 대여(Borrowing) 시스템을 사용합니다.\n\t•\t참조 타입(&str)은 기본적으로 소유권을 가지지 않으며, 그 값이 살아있는 동안만 유효합니다.\n\t•\t만약 'a를 사용하지 않으면, Rust는 NewUser가 참조하는 문자열이 구조체보다 더 짧게 존재할 수도 있다고 판단하여 컴파일 에러를 발생시킵니다.\n  - 만약 String 을 사용하면 String은 소유권을 가지므로 라이프타임 매개변수가 필요없음"
+        }
+      ],
+      "id": "Y3L6Scxa",
+      "createdAt": 1741783227712,
+      "updatedAt": 1741783240259
     }
   ],
   "tags": []
