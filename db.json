@@ -726,17 +726,17 @@
       "folderId": "amHWqhN6",
       "tagsIds": [],
       "description": null,
-      "name": "Unreal",
+      "name": "Unreal Foundation",
       "content": [
         {
           "label": "Fragment 1",
           "language": "c_cpp",
-          "value": "// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)"
+          "value": "// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n// 코드 상세 로그\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)\n\n// TCHAR, FString 각각의 미묘한 차이\nTCHAR CharArr = TEXT(\"hello\")\nFString String = CharArr\nUE_LOG(LogTemp, Log, CharArr);\nUE_LOG(LogTemp, Log, \"TEXT(\"%s\")\", *String);\n\nif (String.Contains(TEXT(\"hell\")), ESearchCase::IgnoreCase) {}\nFString Left, Right;\nif (String.Split(TEXT(\"ll\"), &Left, &Right)) {}\n\nFName\t// 애셋 관리를 위해 사용됨. 대소문자 구분 없음, 가벼움\nFText\t// 다국어 지원을 위함\n\nuint8\nint64\nint32 IntValue = 32;\nFString IntString = FString::FromInt(IntValue);\n\n데이터 저장(UProperty) 같은 경우 bool 사용이 안됨\nbool 타입 선언 방법\nb접두사 붙여서 uint8로 선언\nex) uint8 bNetTemporary:1 (:1은 비트필드)"
         }
       ],
       "id": "GQVV2Beh",
       "createdAt": 1739510270922,
-      "updatedAt": 1741783205318
+      "updatedAt": 1742272581138
     },
     {
       "isDeleted": false,
@@ -809,6 +809,24 @@
       "id": "3D5hK6_x",
       "createdAt": 1741783375666,
       "updatedAt": 1741783396440
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "amHWqhN6",
+      "tagsIds": [],
+      "description": null,
+      "name": "Unreal",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "에러체크\ncheck(1==2);\t// 크래시 되면서 에러 출력\nensure(1==2, TEXT(\"일부러 발생시킨 로그\"));\t// 로그창에 크래시로그 출력\n\n"
+        }
+      ],
+      "id": "iIpFqr0a",
+      "createdAt": 1742272583258,
+      "updatedAt": 1742275000393
     }
   ],
   "tags": []
