@@ -731,12 +731,12 @@
         {
           "label": "Fragment 1",
           "language": "c_cpp",
-          "value": "// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n// 코드 상세 로그\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)\n\n// TCHAR, FString 각각의 미묘한 차이\nTCHAR CharArr = TEXT(\"hello\")\nFString String = CharArr\nUE_LOG(LogTemp, Log, CharArr);\nUE_LOG(LogTemp, Log, \"TEXT(\"%s\")\", *String);\n\nif (String.Contains(TEXT(\"hell\")), ESearchCase::IgnoreCase) {}\nFString Left, Right;\nif (String.Split(TEXT(\"ll\"), &Left, &Right)) {}\n\nFName\t// 애셋 관리를 위해 사용됨. 대소문자 구분 없음, 가벼움\nFText\t// 다국어 지원을 위함\n\nuint8\nint64\nint32 IntValue = 32;\nFString IntString = FString::FromInt(IntValue);\n\n데이터 저장(UProperty) 같은 경우 bool 사용이 안됨\nbool 타입 선언 방법\nb접두사 붙여서 uint8로 선언\nex) uint8 bNetTemporary:1 (:1은 비트필드)\n\n\n\n\n\n\n\n\n\n\n// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)\n\n팁\n- 유니코드를 위해서 스트링은 항상 Text(\"\") 로 감싸는게 좋다\n- 언리얼은 기본적으로 파스칼 케이스"
+          "value": "// 로그\nUE_LOG(LogTemp, Warning, TEXT(\"워닝 로그야~\"));\n\n// 다이얼로그\nFMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(\"ToolCommand\", \"Action 1 Message\"));\n\n// 코드 상세 로그\n#define ED_LOG_CALLINFO (FString(__FUNCTION__)+\"[\"+FString::FromInt(__LINE__)+\"]\")\n#define ED_LOG(Verbosity, Format, ...) UE_LOG(LogGamePlatformEditor, Verbosity, TEXT(\"%s \") Format, *ED_LOG_CALLINFO, ##__VA_ARGS__)\n\n// TCHAR, FString 각각의 미묘한 차이\nTCHAR CharArr = TEXT(\"hello\")\nFString String = CharArr\nUE_LOG(LogTemp, Log, CharArr);\nUE_LOG(LogTemp, Log, \"TEXT(\"%s\")\", *String);\n\nif (String.Contains(TEXT(\"hell\")), ESearchCase::IgnoreCase) {}\nFString Left, Right;\nif (String.Split(TEXT(\"ll\"), &Left, &Right)) {}\n\nFName\t// 애셋 관리를 위해 사용됨. 대소문자 구분 없음, 가벼움\nFText\t// 다국어 지원을 위함\n\nuint8\nint64\nint32 IntValue = 32;\nFString IntString = FString::FromInt(IntValue);\n\n데이터 저장(UProperty) 같은 경우 bool 사용이 안됨\nbool 타입 선언 방법\nb접두사 붙여서 uint8로 선언\nex) uint8 bNetTemporary:1 (:1은 비트필드)\n\n// 언리얼 객채 생성하기\nUXxxx* Xxxx = NewObject<UXxxx>();\n\n// 언리얼 인터페이스\n// cpp에서는 인터페이스가 따로 없지만 언리얼에서는 class를 이용하여 유사하게 설계 가능하다\nUNREALINTERFACE_API"
         }
       ],
       "id": "GQVV2Beh",
       "createdAt": 1739510270922,
-      "updatedAt": 1742272581138
+      "updatedAt": 1742282420796
     },
     {
       "isDeleted": false,
@@ -749,12 +749,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "자동정렬: ctrl + K + F\n\n해더에 선언된 메서드 자동 구현체 생성: art + enter\n\n라이브코딩: ctrl + art + f11"
+          "value": "자동정렬: ctrl + K + F\n\n해더에 선언된 메서드 구현체 생성: art + enter\n\n라이브코딩: ctrl + art + f11\n\n언리얼 에디터 열기: ctrl + f5"
         }
       ],
       "id": "BDImCtMp",
       "createdAt": 1741158143478,
-      "updatedAt": 1742264620060
+      "updatedAt": 1742280811350
     },
     {
       "isDeleted": false,
@@ -816,17 +816,17 @@
       "folderId": "amHWqhN6",
       "tagsIds": [],
       "description": null,
-      "name": "Unreal",
+      "name": "Unreal ETC",
       "content": [
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "에러체크\ncheck(1==2);\t// 크래시 되면서 에러 출력\nensure(1==2, TEXT(\"일부러 발생시킨 로그\"));\t// 로그창에 크래시로그 출력\n\n"
+          "value": "팁\n- 유니코드를 위해서 스트링은 항상 Text(\"\") 로 감싸는게 좋다\n- 언리얼은 기본적으로 파스칼 케이스\n- 소스코드에 한글이 들어가면 수정 소스 저장할때 utf-8 지정해줘야함\n\n에러체크\ncheck(1==2);\t// 크래시 되면서 에러 출력\nensure(1==2, TEXT(\"일부러 발생시킨 로그\"));\t// 로그창에 크래시로그 출력\n\n"
         }
       ],
       "id": "iIpFqr0a",
       "createdAt": 1742272583258,
-      "updatedAt": 1742275000393
+      "updatedAt": 1742282103609
     }
   ],
   "tags": []
