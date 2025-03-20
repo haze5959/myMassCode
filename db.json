@@ -899,6 +899,42 @@
       "id": "Ua14Crz7",
       "createdAt": 1742106058979,
       "updatedAt": 1742106089392
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "모듈화",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "crate::\t현재 크레이트의 최상위 경로에서 시작\tcrate::schema::users\nself::\t현재 모듈을 기준으로 참조\tself::helper_function()\nsuper::\t부모 모듈을 기준으로 참조\tsuper::parent_function()\nmod\t새로운 모듈 선언\tmod schema;\n\n// 모듈 선언 방법\nmod outer {\n    pub mod inner {\n        pub fn say_hello() {\n            println!(\"Hello from inner module!\");\n        }\n    }\n}\n\nfn main() {\n    outer::inner::say_hello(); // ✅ 하위 모듈 호출\n}\n\npub use inner::say_hello;\t// 모듈에서 이렇게 선언하면 바로 outer::say_hello()로 경로 단순화 가능\n\n// Prelude\nuse로 가져오지도 않았는데 어떻게 어디서나 Vec나 Box를 쓸 수 있는지 궁금하실지도 모르겠습니다. 이는 standard library의 prelude module 덕분\nhttps://velog.io/@wjddlstn0614/Rust-Prelude"
+        }
+      ],
+      "id": "EEmkXNP_",
+      "createdAt": 1742100231511,
+      "updatedAt": 1742101434041
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Hash Map",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "use std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 동적 디스패치\nlet mut map: HashMap<String, Box<dyn Any>> = HashMap::new();\n\nmap.insert(\"int\".to_string(), Box::new(42)); // i32 저장\nmap.insert(\"float\".to_string(), Box::new(3.14)); // f64 저장\nmap.insert(\"string\".to_string(), Box::new(\"Hello\".to_string())); // String 저장\n\n// ✅ 값을 꺼낼 때 다운캐스팅 필요\nif let Some(value) = map.get(\"int\") {\n  if let Some(num) = value.downcast_ref::<i32>() {\n    println!(\"int: {}\", num);\n  }\n}\n\nif let Some(value) = map.get(\"float\") {\n  if let Some(num) = value.downcast_ref::<f64>() {\n  \tprintln!(\"float: {}\", num);\n  }\n}\n\nif let Some(value) = map.get(\"string\") {\n  if let Some(text) = value.downcast_ref::<String>() {\n  \tprintln!(\"string: {}\", text);\n  }\n}"
+        }
+      ],
+      "id": "Ua14Crz7",
+      "createdAt": 1742106058979,
+      "updatedAt": 1742106089392
     }
   ],
   "tags": []
