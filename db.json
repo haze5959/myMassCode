@@ -461,12 +461,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "https://tourofrust.com/\nhttps://www.slideshare.net/slideshow/momenti-seminar-a-tour-of-rust-part-1/250379437\nhttps://www.slideshare.net/utilforever/momenti-seminar-a-tour-of-rust-part-2\n\n// 기본 개념\nlet mut(mutable) 넣으면 변경 가능한 값\n없으면 기본적으로 read-only\n\nconst PI: f32 = 3.14159;\t// 상수\n\n// 자료형\n부울 값 - 참/거짓 값을 나타내는 bool\n부호가 없는 정수형 - 양의 정수를 나타내는 u8 u16 u32 u64 u128\n부호가 있는 정수형 - 양/음의 정수를 나타내는 i8 i16 i32 i64 i128\n포인터 사이즈 정수 - 메모리에 있는 값들의 인덱스와 크기를 나타내는 usize isize\n부동 소수점 - f32 f64\n튜플(tuple) - stack에 있는 값들의 고정된 순서를 전달하기 위한 (값, 값, ...)\n배열(array) - 컴파일 타임에 정해진 길이를 갖는 유사한 원소들의 모음(collection)인 [값, 값, ...]\n슬라이스(slice) - 런타임에 길이가 정해지는 유사한 원소들의 collection\nstr(문자열 slice) - 런타임에 길이가 정해지는 텍스트\nString - 문자열, str과 다름, 다양한 메서드 제공\n\nlet c = 4.3f32; // 이런식으로 숫자 뒤에 자료형을 붙여 표현 가능\n\n// 자료형 변환\nlet a = 13u8;\nlet b = 7u32;\nlet c = a as u32 + b;\n\nlet a = 42;\nlet a_string = a.to_string();\nlet b = a_string.parse::<i32>()?;\n\n// String\nlet s = String::from(\"Hello\");\nlet slice: &str = &s;  // `String`에서 `&str`로 슬라이스를 생성\nslice.to_string()\t// 다시 슬라이스로 변환\n// r#으로 시작해서 #으로 끝나면 원시 문자열\nlet a: &'static str = r#\"\n        <div class=\"advice\">\n            원시 문자열은 일부 상황에서 유용합니다.\n        </div>\n        \"#;\n// slice\nlet first_word = &a[0..2];\n// 인터폴레이션\nformat!(\"Hello, my name is {} and I am {} years old.\", name, age);\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\t// i32는 원소의 자료형, 3은 컴파일 타임에 주어지는 고정된 길이\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// 가변 어레이(Vector)\nlet mut i32_vec = Vec::<i32>::new(); \ni32_vec.push(1);\ni32_vec.push(2);\n// or\nlet i32_vec = vec![i32::from(1), i32::from(2)];\nfor word in i32_vec.iter() {\n\tprintln!(\"{}\", word);\n}\n\n// HashMap\nuse std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 함수\nfn swap(x: i32, y: i32) -> (i32, i32) {\n    return (y, x);\n}\n\n// 블록 표현\nlet result = match food {\n        \"핫도그\" => \"핫도그다\",\n        // 리턴문 하나 뿐이라면 중괄호는 필수가 아님\n        _ => \"핫도그가 아니다\",\n    };\n\nlet v = {\n  // 이 범위 블록은 함수 범위를 더럽히지 않고 값을 가져오게 해준다\n  let a = 1;\n  let b = 2;\n  a + b\n};\n\n스태틱 메소드(static methods) - 자료형 그 자체에 속하는 메소드로서, :: 연산자를 이용하여 호출함.\nlet s = String::from(\"Hello world!\");\n\n인스턴스 메소드(instance methods) - 자료형의 인스턴스에 속하는 메소드로서, . 연산자를 이용하여 호출함.\nprintln!(\"{}의 글자 수는 {}입니다.\", s, s.len());\n\n// 소유권 대여하기\nlet f = &foo;\nlet f = &mut foo;\t// foo가 mutable하다면\nlet bar = *f; // owner의 값의 복사본을 가져옴\n*f = 13; // 참조의 owner의 값을 설정함\n\nlet a: &'static str = \"hi 🦀\";\t// static 선언하기\n\n// Box\nBox는 stack에 있는 데이터를 heap으로 옮길 수 있게 해주는 데이터 구조입니다.\nBox는 smart pointer로도 알려진 struct이며 heap에 있는 데이터를 가리키는 포인터를 들고 있습니다."
+          "value": "https://tourofrust.com/\nhttps://www.slideshare.net/slideshow/momenti-seminar-a-tour-of-rust-part-1/250379437\nhttps://www.slideshare.net/utilforever/momenti-seminar-a-tour-of-rust-part-2\n\n// 기본 개념\nlet mut(mutable) 넣으면 변경 가능한 값\n없으면 기본적으로 read-only\n\nconst PI: f32 = 3.14159;\t// 상수\n\n// 자료형\n부울 값 - 참/거짓 값을 나타내는 bool\n부호가 없는 정수형 - 양의 정수를 나타내는 u8 u16 u32 u64 u128\n부호가 있는 정수형 - 양/음의 정수를 나타내는 i8 i16 i32 i64 i128\n포인터 사이즈 정수 - 메모리에 있는 값들의 인덱스와 크기를 나타내는 usize isize\n부동 소수점 - f32 f64\n튜플(tuple) - stack에 있는 값들의 고정된 순서를 전달하기 위한 (값, 값, ...)\n배열(array) - 컴파일 타임에 정해진 길이를 갖는 유사한 원소들의 모음(collection)인 [값, 값, ...]\n슬라이스(slice) - 런타임에 길이가 정해지는 유사한 원소들의 collection\nstr(문자열 slice) - 런타임에 길이가 정해지는 텍스트\nString - 문자열, str과 다름, 다양한 메서드 제공\n\nlet c = 4.3f32; // 이런식으로 숫자 뒤에 자료형을 붙여 표현 가능\n\n// 자료형 변환\nlet a = 13u8;\nlet b = 7u32;\nlet c = a as u32 + b;\n\nlet a = 42;\nlet a_string = a.to_string();\nlet b = a_string.parse::<i32>()?;\n\n// String\nlet s = String::from(\"Hello\");\nlet slice: &str = &s;  // `String`에서 `&str`로 슬라이스를 생성\nslice.to_string()\t// 다시 슬라이스로 변환\n// r#으로 시작해서 #으로 끝나면 원시 문자열\nlet a: &'static str = r#\"\n        <div class=\"advice\">\n            원시 문자열은 일부 상황에서 유용합니다.\n        </div>\n        \"#;\n// slice\nlet first_word = &a[0..2];\n// 인터폴레이션\nformat!(\"Hello, my name is {} and I am {} years old.\", name, age);\n\n#[derive(Debug)]를 사용하면 아래 사용 가능\nprintln!(\"{:?}\", user);   // ✅ 기본 Debug 출력\nprintln!(\"{:#?}\", user);  // ✅ Pretty Print (보기 좋게 출력)\n\n// String과 &str 차이\nString\n소유권\t데이터를 소유함 (Heap에 저장)\t\n메모리 위치: Heap\t\n가변성: 변경 가능 (push, push_str)\t\n사용 사례: 가변적인 문자열이 필요할 때\n\n&str\n데이터를 소유하지 않음 (Stack에 저장된 문자열 참조)\n메모리 위치: Stack 또는 Heap 내부의 일부\n가변성: 변경 불가능 (Immutable)\n사용 사례: 함수 인자로 문자열을 전달할 때 (왜냐하면 String으로 전달하면 메모리 낭비)\n\n// Array\nlet mut array: [i32; 3] = [0; 3];\t// i32는 원소의 자료형, 3은 컴파일 타임에 주어지는 고정된 길이\n\narray[1] = 1;\narray[2] = 2;\n\nassert_eq!([1, 2], &array[1..]);\n\n// 가변 어레이(Vector)\nlet mut i32_vec = Vec::<i32>::new(); \ni32_vec.push(1);\ni32_vec.push(2);\n// or\nlet i32_vec = vec![i32::from(1), i32::from(2)];\nfor word in i32_vec.iter() {\n\tprintln!(\"{}\", word);\n}\n\n// 함수\nfn swap(x: i32, y: i32) -> (i32, i32) {\n    return (y, x);\n}\n\n// 블록 표현\nlet result = match food {\n        \"핫도그\" => \"핫도그다\",\n        // 리턴문 하나 뿐이라면 중괄호는 필수가 아님\n        _ => \"핫도그가 아니다\",\n    };\n\nlet v = {\n  // 이 범위 블록은 함수 범위를 더럽히지 않고 값을 가져오게 해준다\n  let a = 1;\n  let b = 2;\n  a + b\n};\n\n스태틱 메소드(static methods) - 자료형 그 자체에 속하는 메소드로서, :: 연산자를 이용하여 호출함.\nlet s = String::from(\"Hello world!\");\n\n인스턴스 메소드(instance methods) - 자료형의 인스턴스에 속하는 메소드로서, . 연산자를 이용하여 호출함.\nprintln!(\"{}의 글자 수는 {}입니다.\", s, s.len());\n\n// 소유권 대여하기\nlet f = &foo;\nlet f = &mut foo;\t// foo가 mutable하다면\nlet bar = *f; // owner의 값의 복사본을 가져옴\n*f = 13; // 참조의 owner의 값을 설정함\n\nlet a: &'static str = \"hi 🦀\";\t// static 선언하기\n\n// Box\nBox는 stack에 있는 데이터를 heap으로 옮길 수 있게 해주는 데이터 구조입니다.\nBox는 smart pointer로도 알려진 struct이며 heap에 있는 데이터를 가리키는 포인터를 들고 있습니다."
         }
       ],
       "id": "gIOH9xzE",
       "createdAt": 1715057458775,
-      "updatedAt": 1740034266851
+      "updatedAt": 1742106077695
     },
     {
       "isDeleted": false,
@@ -497,12 +497,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 공통 규칙\n## common header\n```json\n{\"authorization\": \"Bearer ACCESS_TOKEN\"}\n```\n## common response model\n```json\n// success\n{\n\t\"result\": true,\n\t\"data\": data model\n}\n\n// fail\n{\n\t\"result\": false,\n\t\"error\": {\n\t\t\"code\": 9999,\n\t\t\"msg\": \"unknown\"\n\t}\n}\n```\n\n# users\n## post\n### path: users/\n#### body\n```json\n{\"sub\": \"auth0 sub\" \"nick_name\": \"name\"}\n```\n#### response data\n- User model\n\n## get\n### path: users/\n#### response data\n- User model\n\n### path: users/search\n#### query\n- nick_name\n#### response data\n- User model\n\n### path: users/favorites\n#### response data\n```json\n{\"product_ids\": Product Id Array}\n```\n\n## put\n### path: users/\n#### body\n```json\n{\"nick_name\": \"nick name\"}\n```\n\n## delete\n### path: users/\n#### response data\n- null\n\n# products\n## post\n### path: products/\n#### body\n```json\n{\"name\": \"product name\",\n\"type\": 1,\n\"barcode_id\": optional}\n```\n#### response data\n- Product model\n\n## get\n### path: products/:id\n#### response data\n```json\n{\"product\": Product model,\n\"images\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/barcode/:barcode_id\n#### response data\n```json\n{\"product\": Product model,\n\"images\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/\n#### query\n- page\n- per\n- name(optional)\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"images\": [ProductImage id(최대 3개)]}\n]}\n```\n\n## put\n## delete\n### path: products/:id(안씀)\n#### response data\n- null\n\n# notes\n## post\n### path: notes/\n#### body\n```json\n{\"product_id\": \"product_id\",\n\"body\": \"body\",\n\"image_ids\": [ProductImage id]}\n```\n#### response data\n- Note model\n\n## get\n### path: notes/:id\n#### response data\n```json\n{\"note\": Note model,\n\"product\": Product model,\n\"user\": User model(Optional),\n\"images\": [ProductImage id]}\n```\n\n### path: notes/\n#### query\n- page\n- per\n- product_id(optional)\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"images\": [ProductImage id](최대 3개)}\n]}\n```\n\n### path: notes/user/:id\n#### query\n- page\n- per\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"images\": [ProductImage id](최대 3개)}\n]}\n```\n\n## put\n### path: notes/:id\n#### body\n- Note model\n\n## delete\n### path: notes/:id\n#### response data\n- null\n\n# images\n## post\n### path: images/\n#### body\n```json\n{\"product_id\": product_id(Optional)\n\"note_id\": note_id(Optional)}\n```\n#### response data\n- ProductImage model\n\n## delete\n### path: images/:id\n#### response data\n- null"
+          "value": "# 공통 규칙\n## common header\n```json\n{\"authorization\": \"Bearer ACCESS_TOKEN\"}\n```\n## common response model\n```json\n// success\n{\n\t\"result\": true,\n\t\"data\": data model\n}\n\n// fail\n{\n\t\"result\": false,\n\t\"error\": {\n\t\t\"code\": 9999,\n\t\t\"msg\": \"unknown\"\n\t}\n}\n```\n\n# users\n## post\n### path: users/\n#### body\n```json\n{\"sub\": \"auth0 sub\" \"nick_name\": \"name\"}\n```\n#### response data\n- User model\n\n## get\n### path: users/\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/:id\n#### response data\n- User model\n\n### path: users/search\n#### query\n- nick_name\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/favorites\n#### response data\n```json\n{\"product_ids\": Product Id Array}\n```\n\n## put\n### path: users/\n#### body\n```json\n{\"nick_name\": \"nick name\"}\n```\n\n## delete\n### path: users/\n#### response data\n- null\n\n# products\n## post\n### path: products/\n#### body\n```json\n{\"name\": \"product name\",\n\"type\": 1,\n\"barcode_id\": optional}\n```\n#### response data\n- Product model\n\n## get\n### path: products/:id\n#### response data\n```json\n{\"product\": Product model,\n\"images\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/barcode/:barcode_id\n#### response data\n```json\n{\"product\": Product model,\n\"images\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/\n#### query\n- page\n- per\n- name(optional)\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"images\": [ProductImage id(최대 3개)]}\n]}\n```\n\n## put\n## delete\n### path: products/:id(안씀)\n#### response data\n- null\n\n# notes\n## post\n### path: notes/\n#### body\n```json\n{\"product_id\": \"product_id\",\n\"body\": \"body\",\n\"image_ids\": [ProductImage id]}\n```\n#### response data\n- Note model\n\n## get\n### path: notes/:id\n#### response data\n```json\n{\"note\": Note model,\n\"product\": Product model,\n\"user\": User model(Optional),\n\"images\": [ProductImage id]}\n```\n\n### path: notes/\n#### query\n- page\n- per\n- product_id(optional)\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"images\": [ProductImage id](최대 3개)}\n]}\n```\n\n### path: notes/user/:id\n#### query\n- page\n- per\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"images\": [ProductImage id](최대 3개)}\n]}\n```\n\n## put\n### path: notes/:id\n#### body\n- Note model\n\n## delete\n### path: notes/:id\n#### response data\n- null\n\n# images\n## post\n### path: images/\n#### body\n```json\n{\"product_id\": product_id(Optional)\n\"note_id\": note_id(Optional)}\n```\n#### response data\n- ProductImage model\n\n## delete\n### path: images/:id\n#### response data\n- null"
         }
       ],
       "id": "TNLZBaE9",
       "createdAt": 1726580854639,
-      "updatedAt": 1729418316197
+      "updatedAt": 1742114769586
     },
     {
       "isDeleted": true,
@@ -667,7 +667,7 @@
       "updatedAt": 1738313131208
     },
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "qzhsCzAb",
       "tagsIds": [],
@@ -677,12 +677,12 @@
         {
           "label": "Fragment 1",
           "language": "rust",
-          "value": "library는 lib.rs라 불리는 파일에 root module을 갖고 있습니다.\n\n// 이 macro는 Rust가 테스트 모드가 아닐 경우\n// 이 inline module을 제거합니다.\n#[cfg(test)]\nmod tests {\n    // 부모 module에 즉시 접근이 가능하지 않다는 데에 주의하세요.\n    // 반드시 명시적으로 써줘야 합니다.\n    use super::*;\n\n    ... tests go here ...\n}\n\n// 내부 모듈 참조하기\ncrate - root module\nsuper - 현재 module의 부모 module\nself - 현재 module\n\n// Prelude\nuse로 가져오지도 않았는데 어떻게 어디서나 Vec나 Box를 쓸 수 있는지 궁금하실지도 모르겠습니다. 이는 standard library의 prelude module 덕분\nhttps://velog.io/@wjddlstn0614/Rust-Prelude"
+          "value": "library는 lib.rs라 불리는 파일에 root module을 갖고 있습니다.\n\n// 이 macro는 Rust가 테스트 모드가 아닐 경우\n// 이 inline module을 제거합니다.\n#[cfg(test)]\nmod tests {\n    // 부모 module에 즉시 접근이 가능하지 않다는 데에 주의하세요.\n    // 반드시 명시적으로 써줘야 합니다.\n    use super::*;\n\n    ... tests go here ...\n}\n\n// 내부 모듈 참조하기\ncrate - root module\nsuper - 현재 module의 부모 module\nself - 현재 module\n\n"
         }
       ],
       "id": "TdeRy_EO",
       "createdAt": 1738303592238,
-      "updatedAt": 1740034061627
+      "updatedAt": 1742101430942
     },
     {
       "isDeleted": false,
@@ -863,6 +863,42 @@
       "id": "Iowkvj7k",
       "createdAt": 1742357837801,
       "updatedAt": 1742359568228
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "모듈화",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "crate::\t현재 크레이트의 최상위 경로에서 시작\tcrate::schema::users\nself::\t현재 모듈을 기준으로 참조\tself::helper_function()\nsuper::\t부모 모듈을 기준으로 참조\tsuper::parent_function()\nmod\t새로운 모듈 선언\tmod schema;\n\n// 모듈 선언 방법\nmod outer {\n    pub mod inner {\n        pub fn say_hello() {\n            println!(\"Hello from inner module!\");\n        }\n    }\n}\n\nfn main() {\n    outer::inner::say_hello(); // ✅ 하위 모듈 호출\n}\n\npub use inner::say_hello;\t// 모듈에서 이렇게 선언하면 바로 outer::say_hello()로 경로 단순화 가능\n\n// Prelude\nuse로 가져오지도 않았는데 어떻게 어디서나 Vec나 Box를 쓸 수 있는지 궁금하실지도 모르겠습니다. 이는 standard library의 prelude module 덕분\nhttps://velog.io/@wjddlstn0614/Rust-Prelude"
+        }
+      ],
+      "id": "EEmkXNP_",
+      "createdAt": 1742100231511,
+      "updatedAt": 1742101434041
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "qzhsCzAb",
+      "tagsIds": [],
+      "description": null,
+      "name": "Hash Map",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "rust",
+          "value": "use std::collections::HashMap;\n\nlet original: [i32; 3] = [1, 2, 3];\n\nlet map1 = HashMap::from([(1, 2), (3, 4)]);\nlet map2: HashMap<_, _> = [(1, 2), (3, 4)].into();\nassert_eq!(map1, map2);\n\n// 동적 디스패치\nlet mut map: HashMap<String, Box<dyn Any>> = HashMap::new();\n\nmap.insert(\"int\".to_string(), Box::new(42)); // i32 저장\nmap.insert(\"float\".to_string(), Box::new(3.14)); // f64 저장\nmap.insert(\"string\".to_string(), Box::new(\"Hello\".to_string())); // String 저장\n\n// ✅ 값을 꺼낼 때 다운캐스팅 필요\nif let Some(value) = map.get(\"int\") {\n  if let Some(num) = value.downcast_ref::<i32>() {\n    println!(\"int: {}\", num);\n  }\n}\n\nif let Some(value) = map.get(\"float\") {\n  if let Some(num) = value.downcast_ref::<f64>() {\n  \tprintln!(\"float: {}\", num);\n  }\n}\n\nif let Some(value) = map.get(\"string\") {\n  if let Some(text) = value.downcast_ref::<String>() {\n  \tprintln!(\"string: {}\", text);\n  }\n}"
+        }
+      ],
+      "id": "Ua14Crz7",
+      "createdAt": 1742106058979,
+      "updatedAt": 1742106089392
     }
   ],
   "tags": []
