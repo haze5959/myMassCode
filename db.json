@@ -839,12 +839,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# dSYM 파일로 정확한 코드 라인 찾기\n## 크래시 스택 트레이스 예시\n 1  LM!-[NpHttpManager makeNPBasicRequestWithUrl:httpMethod:requestParams:requestTransactionId:apiDomain:] + 0x170\n      sp = 0x000000017d01acb0     pc = 0x0000000104364a18\n    Found by: previous frame's frame pointer  \n- pc = 0x0000000104364a18 → 이 값이 크래시 발생 주소!\n\n## 앱 메모리 주소 확인\nLoaded modules:\n0x104244000 - 0x1094bbfff  App  ???  (main)\n- 0x104244000 → 앱(App)의 로드 주소 (메모리에 로드된 시작 주소)\n- 0x1094bbfff → 앱이 차지하는 메모리의 끝 주소\n- (동적 라이브러리일 경우 라이브러리꺼 봐야함)\n\n## atos로 정확한 소스 코드 라인 반환하기\natos -o MyApp.app.dSYM/Contents/Resources/DWARF/MyApp -arch arm64 -l 0x104244000 0x104364a18\n- -l 0x104244000 → 앱의 로드 주소\n- 0x104364a18 → 크래시 발생 주소\n"
+          "value": "# dSYM 파일로 정확한 코드 라인 찾기\n## 크래시 스택 트레이스 예시\n 1  LM!-[NpHttpManager makeNPBasicRequestWithUrl:httpMethod:requestParams:requestTransactionId:apiDomain:] + 0x170\n      sp = 0x000000017d01acb0     pc = 0x0000000104364a18\n    Found by: previous frame's frame pointer  \n- pc = 0x0000000104364a18 → 이 값이 크래시 발생 주소!\n\n## 앱 메모리 주소 확인\nLoaded modules:\n0x104244000 - 0x1094bbfff  App  ???  (main)\n- 0x104244000 → 앱(App)의 로드 주소 (메모리에 로드된 시작 주소)\n- 0x1094bbfff → 앱이 차지하는 메모리의 끝 주소\n- (동적 라이브러리일 경우 라이브러리꺼 봐야함)\n\n## atos로 정확한 소스 코드 라인 반환하기\natos -o MyApp.app.dSYM/Contents/Resources/DWARF/MyApp -arch arm64 -l 0x104244000 0x104364a18\n- -l 0x104244000 → 앱의 로드 주소\n- 0x104364a18 → 크래시 발생 주소\n\n## adb로 안드로이드 무선 디버깅하기\nadb pair 172.19.18.184:40649\nEnter pairing code: 088333\nadb connect 172.19.18.184:38167"
         }
       ],
       "id": "y4sFmOBp",
       "createdAt": 1742286464126,
-      "updatedAt": 1742543178114
+      "updatedAt": 1743638472007
     },
     {
       "isDeleted": false,
