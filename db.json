@@ -8,7 +8,8 @@
       "defaultLanguage": "plain_text",
       "id": "vhYiJDpn",
       "createdAt": 1697954702226,
-      "updatedAt": 1697954708956
+      "updatedAt": 1697954708956,
+      "index": 0
     },
     {
       "name": "Typescript",
@@ -18,7 +19,8 @@
       "defaultLanguage": "plain_text",
       "id": "6Xpe1L2B",
       "createdAt": 1698026648307,
-      "updatedAt": 1698026655069
+      "updatedAt": 1698026655069,
+      "index": 1
     },
     {
       "name": "Python",
@@ -28,7 +30,8 @@
       "defaultLanguage": "plain_text",
       "id": "Btz7BEVz",
       "createdAt": 1698026658437,
-      "updatedAt": 1698026670886
+      "updatedAt": 1698026670886,
+      "index": 2
     },
     {
       "name": "Markdown",
@@ -38,7 +41,8 @@
       "defaultLanguage": "plain_text",
       "id": "Vx9GQppL",
       "createdAt": 1698138350377,
-      "updatedAt": 1739510232054
+      "updatedAt": 1739510232054,
+      "index": 3
     },
     {
       "name": "Rust",
@@ -48,7 +52,8 @@
       "defaultLanguage": "plain_text",
       "id": "qzhsCzAb",
       "createdAt": 1715057451358,
-      "updatedAt": 1715057456316
+      "updatedAt": 1715057456316,
+      "index": 4
     },
     {
       "name": "C++",
@@ -58,17 +63,19 @@
       "defaultLanguage": "plain_text",
       "id": "amHWqhN6",
       "createdAt": 1738891284934,
-      "updatedAt": 1739510237311
+      "updatedAt": 1739510237311,
+      "index": 5
     },
     {
       "name": "IDE",
       "parentId": null,
-      "isOpen": false,
+      "isOpen": true,
       "isSystem": false,
       "defaultLanguage": "plain_text",
       "id": "vs7wRccf",
       "createdAt": 1741158132683,
-      "updatedAt": 1741158141476
+      "updatedAt": 1741158141476,
+      "index": 6
     }
   ],
   "snippets": [
