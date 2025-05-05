@@ -539,13 +539,13 @@
       "content": [
         {
           "label": "Fragment 1",
-          "language": "plain_text",
-          "value": "https://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\n\nhttps://youtu.be/LaimspStHzk\n- 커스텀 얼럿\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\n@Observable\n- iOS17에서 등장한 ui data flow 기법\n\nTipKit 사용해보기\n- 도네 요구하기\n\n컨트롤센터에 바코드찍기 바로가기 만들기"
+          "language": "markdown",
+          "value": "- add_single_user에서 token에서 sub 빼오는 로직 추가\n- add_single_user에 sub값 0auth 검증 로직 추가\n- delete_single_user에서 HttpAuthentication에서 받은 token이나 sub값으로 유저 id 조회 후 제거하는 로직 추가\n- products 핸들러 개발\n- notes 핸들러 개발\n- images 스태틱 서버 개발 및 핸들러 개발\n\nhttps://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\n\nhttps://youtu.be/LaimspStHzk\n- 커스텀 얼럿\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\n@Observable\n- iOS17에서 등장한 ui data flow 기법\n\nTipKit 사용해보기\n- 도네 요구하기\n\n컨트롤센터에 바코드찍기 바로가기 만들기"
         }
       ],
       "id": "ltPExcke",
       "createdAt": 1726808499416,
-      "updatedAt": 1727411626096
+      "updatedAt": 1746462040294
     },
     {
       "isDeleted": false,
