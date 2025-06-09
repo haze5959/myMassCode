@@ -924,6 +924,24 @@
       "id": "Mtw8ffNF",
       "createdAt": 1742522494780,
       "updatedAt": 1742524569622
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vs7wRccf",
+      "tagsIds": [],
+      "description": null,
+      "name": "Terminal",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "# ios framework가 static인지 dynamic 인지 확인\n```sh\nfile YourFramework.framework/YourFramework\n```\n- 동적 프레임워크(Dynamic)\n\t- Mach-O 64-bit dynamically linked shared library\n- 정적 프레임워크(Static)\n\t- Mach-O 64-bit object"
+        }
+      ],
+      "id": "BD0BcCBP",
+      "createdAt": 1745556117185,
+      "updatedAt": 1745556273968
     }
   ],
   "tags": []
