@@ -67,14 +67,14 @@
       "index": 5
     },
     {
-      "name": "IDE",
+      "name": "IDE & Tools",
       "parentId": null,
       "isOpen": true,
       "isSystem": false,
       "defaultLanguage": "plain_text",
       "id": "vs7wRccf",
       "createdAt": 1741158132683,
-      "updatedAt": 1741158141476,
+      "updatedAt": 1750645950802,
       "index": 6
     }
   ],
@@ -954,12 +954,30 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\GamebitUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign"
+          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\GamebitUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/GamebitUnreal.uproject\" \\\n-build \\\n-configuration=Shipping \\\n-platform=IOS \\\n-cook \\\n-unversionedcookedcontent \\\n-stage \\\n-pak \\\n-archive \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\n-utf8output \\\n-buildmachine \\\n-unattended \\\n-noP4 \\\n-nosplash \\\n-stdout \\\n-buildlighting \\\n-NoCodeSign"
         }
       ],
       "id": "hL-1akf-",
       "createdAt": 1750313069873,
-      "updatedAt": 1750313387959
+      "updatedAt": 1751012773259
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vs7wRccf",
+      "tagsIds": [],
+      "description": null,
+      "name": "Git",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa"
+        }
+      ],
+      "id": "ZIDOPPnM",
+      "createdAt": 1750645957518,
+      "updatedAt": 1750645979051
     }
   ],
   "tags": []
