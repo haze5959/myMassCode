@@ -936,12 +936,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# ios framework가 static인지 dynamic 인지 확인\n```sh\nfile YourFramework.framework/YourFramework\n```\n- 동적 프레임워크(Dynamic)\n\t- Mach-O 64-bit dynamically linked shared library\n- 정적 프레임워크(Static)\n\t- Mach-O 64-bit object"
+          "value": "# ios framework가 static인지 dynamic 인지 확인\n```sh\nfile YourFramework.framework/YourFramework\n```\n- 동적 프레임워크(Dynamic)\n\t- Mach-O 64-bit dynamically linked shared library\n- 정적 프레임워크(Static)\n\t- Mach-O 64-bit object\n  \n  \n# 서버 관련 유용 명렁어\n## 실행중인 프로세스 보기\nps aux | grep 'jenkins\n## 젠킨스 노드 실행하기\nlaunchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.jenkins.agent.plist"
         }
       ],
       "id": "BD0BcCBP",
       "createdAt": 1745556117185,
-      "updatedAt": 1745556273968
+      "updatedAt": 1754460480973
     },
     {
       "isDeleted": false,
@@ -954,12 +954,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\GamebitUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/GamebitUnreal.uproject\" \\\n-build \\\n-configuration=Shipping \\\n-platform=IOS \\\n-cook \\\n-unversionedcookedcontent \\\n-stage \\\n-pak \\\n-archive \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\n-utf8output \\\n-buildmachine \\\n-unattended \\\n-noP4 \\\n-nosplash \\\n-stdout \\\n-buildlighting \\\n-NoCodeSign"
+          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/PWChatSdkUnreal.uproject\" \\\n-build \\\n-configuration=Shipping \\\n-platform=IOS \\\n-cook \\\n-unversionedcookedcontent \\\n-stage \\\n-pak \\\n-archive \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\n-utf8output \\\n-buildmachine \\\n-unattended \\\n-noP4 \\\n-nosplash \\\n-stdout \\\n-buildlighting \\\n-NoCodeSign\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
         }
       ],
       "id": "hL-1akf-",
       "createdAt": 1750313069873,
-      "updatedAt": 1751012773259
+      "updatedAt": 1754360756704
     },
     {
       "isDeleted": false,
