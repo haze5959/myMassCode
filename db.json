@@ -954,12 +954,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/PWChatSdkUnreal.uproject\" \\\n-build \\\n-configuration=Shipping \\\n-platform=IOS \\\n-cook \\\n-unversionedcookedcontent \\\n-stage \\\n-pak \\\n-archive \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\n-utf8output \\\n-buildmachine \\\n-unattended \\\n-noP4 \\\n-nosplash \\\n-stdout \\\n-buildlighting \\\n-NoCodeSign\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
+          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/PWChatSdkUnreal.uproject\" \\\n-build \\\\\n-configuration=Shipping \\\\\n-platform=IOS \\\\\n-cook \\\\\n-unversionedcookedcontent \\\\\n-stage \\\\\n-pak \\\\\n-archive \\\\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\\\n-utf8output \\\\\n-nop4 \\\\\n-allmaps \\\\\n-compressed \\\\\n-distribution \\\\\n-nosplash \\\\\n-nodebuginfo\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
         }
       ],
       "id": "hL-1akf-",
       "createdAt": 1750313069873,
-      "updatedAt": 1754360756704
+      "updatedAt": 1754557696124
     },
     {
       "isDeleted": false,
@@ -972,12 +972,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa"
+          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n\n# 커밋 취소하기\ngit reset HEAD^\n"
         }
       ],
       "id": "ZIDOPPnM",
       "createdAt": 1750645957518,
-      "updatedAt": 1750645979051
+      "updatedAt": 1754614251742
     }
   ],
   "tags": []
