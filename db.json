@@ -810,12 +810,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "정렬: Shift(⇧) + Option(⌥) + F"
+          "value": "정렬: Shift(⇧) + Option(⌥ or alt) + F\n모든 창 닫기: ctrl + k + s\n모든 명령 보기: ctrl + shift + p"
         }
       ],
       "id": "3D5hK6_x",
       "createdAt": 1741783375666,
-      "updatedAt": 1741783396440
+      "updatedAt": 1758080622905
     },
     {
       "isDeleted": false,
