@@ -76,6 +76,16 @@
       "createdAt": 1741158132683,
       "updatedAt": 1750645950802,
       "index": 6
+    },
+    {
+      "name": "C#",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "oe6RyYTi",
+      "createdAt": 1758262616516,
+      "updatedAt": 1758262633003
     }
   ],
   "snippets": [
@@ -846,12 +856,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# dSYM 파일로 정확한 코드 라인 찾기\n## 크래시 스택 트레이스 예시\n 1  LM!-[NpHttpManager makeNPBasicRequestWithUrl:httpMethod:requestParams:requestTransactionId:apiDomain:] + 0x170\n      sp = 0x000000017d01acb0     pc = 0x0000000104364a18\n    Found by: previous frame's frame pointer  \n- pc = 0x0000000104364a18 → 이 값이 크래시 발생 주소!\n\n## 앱 메모리 주소 확인\nLoaded modules:\n0x104244000 - 0x1094bbfff  App  ???  (main)\n- 0x104244000 → 앱(App)의 로드 주소 (메모리에 로드된 시작 주소)\n- 0x1094bbfff → 앱이 차지하는 메모리의 끝 주소\n- (동적 라이브러리일 경우 라이브러리꺼 봐야함)\n\n## atos로 정확한 소스 코드 라인 반환하기\natos -o MyApp.app.dSYM/Contents/Resources/DWARF/MyApp -arch arm64 -l 0x104244000 0x104364a18\n- -l 0x104244000 → 앱의 로드 주소\n- 0x104364a18 → 크래시 발생 주소\n\n## adb로 안드로이드 무선 디버깅하기\nadb pair 172.19.18.184:40649\nEnter pairing code: 088333\nadb connect 172.19.18.184:38167\n\n## C# 코드 로그 찍기\nSystem.Console.WriteLine(\"📁1 Plugin path: \" + iOSPluginPath);"
+          "value": "# dSYM 파일로 정확한 코드 라인 찾기\n## 크래시 스택 트레이스 예시\n 1  LM!-[NpHttpManager makeNPBasicRequestWithUrl:httpMethod:requestParams:requestTransactionId:apiDomain:] + 0x170\n      sp = 0x000000017d01acb0     pc = 0x0000000104364a18\n    Found by: previous frame's frame pointer  \n- pc = 0x0000000104364a18 → 이 값이 크래시 발생 주소!\n\n## 앱 메모리 주소 확인\nLoaded modules:\n0x104244000 - 0x1094bbfff  App  ???  (main)\n- 0x104244000 → 앱(App)의 로드 주소 (메모리에 로드된 시작 주소)\n- 0x1094bbfff → 앱이 차지하는 메모리의 끝 주소\n- (동적 라이브러리일 경우 라이브러리꺼 봐야함)\n\n## atos로 정확한 소스 코드 라인 반환하기\natos -o MyApp.app.dSYM/Contents/Resources/DWARF/MyApp -arch arm64 -l 0x104244000 0x104364a18\n- -l 0x104244000 → 앱의 로드 주소\n- 0x104364a18 → 크래시 발생 주소\n\n## adb로 안드로이드 무선 디버깅하기\nadb pair 172.19.18.184:40649\nEnter pairing code: 088333\nadb connect 172.19.17.39:34017"
         }
       ],
       "id": "y4sFmOBp",
       "createdAt": 1742286464126,
-      "updatedAt": 1749454345313
+      "updatedAt": 1758503870524
     },
     {
       "isDeleted": false,
@@ -971,13 +981,31 @@
       "content": [
         {
           "label": "Fragment 1",
-          "language": "plain_text",
-          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n\n# 커밋 취소하기\ngit reset HEAD^\n"
+          "language": "markdown",
+          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n\n# 커밋 취소하기\ngit reset HEAD^\n\n# commit msg 규칙\n- feature: 새로운 기능 추가\n- fix: 버그 수정\n- perf: 성능 개선\n- refactor: 버그를 수정하거나 기능을 추가하지 않는 코드 변경, 리팩토링\n- style: 코드 의미에 영향을 주지 않는 변경사항 (white space, formatting, colons)\n- test: 누락된 테스트 추가 또는 기존 테스트 수정\n- revert: 작업 되돌리기\n- chore: 패키지 매니저 설정할 경우, 코드 수정 없이 설정을 변경\n- build: 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨), ci구성파일 및 스크립트 변경\n- docs: documentation 변경"
         }
       ],
       "id": "ZIDOPPnM",
       "createdAt": 1750645957518,
-      "updatedAt": 1754614251742
+      "updatedAt": 1758162356618
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "oe6RyYTi",
+      "tagsIds": [],
+      "description": null,
+      "name": "Foundation",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "## C# 코드 로그 찍기\nSystem.Console.WriteLine(\"📁1 Plugin path: \" + iOSPluginPath);"
+        }
+      ],
+      "id": "m9KyLJz2",
+      "createdAt": 1758262643840,
+      "updatedAt": 1758262660139
     }
   ],
   "tags": []
