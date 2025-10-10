@@ -735,7 +735,7 @@
       ],
       "id": "3hQkhzl4",
       "createdAt": 1738891302587,
-      "updatedAt": 1759387877641
+      "updatedAt": 1760080026071
     },
     {
       "isDeleted": false,
@@ -838,12 +838,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "팁\n- 유니코드를 위해서 스트링은 항상 Text(\"\") 로 감싸는게 좋다\n- 언리얼은 기본적으로 파스칼 케이스\n- 소스코드에 한글이 들어가면 수정 소스 저장할때 utf-8 지정해줘야함\n\n에러체크\ncheck(1==2);\t// 크래시 되면서 에러 출력\nensure(1==2, TEXT(\"일부러 발생시킨 로그\"));\t// 로그창에 크래시로그 출력\n\n"
+          "value": "팁\n- 유니코드를 위해서 스트링은 항상 Text(\"\") 로 감싸는게 좋다\n- 언리얼은 기본적으로 파스칼 케이스\n- 소스코드에 한글이 들어가면 수정 소스 저장할때 utf-8 지정해줘야함\n\n에러체크\ncheck(1==2);\t// 크래시 되면서 에러 출력\nensure(1==2, TEXT(\"일부러 발생시킨 로그\"));\t// 로그창에 크래시로그 출력\n\n#pragma once: 복수의 include 방지\nFORCEINLINE: 성능을 위한 인라인 함수"
         }
       ],
       "id": "iIpFqr0a",
       "createdAt": 1742272583258,
-      "updatedAt": 1742282103609
+      "updatedAt": 1760080051988
     },
     {
       "isDeleted": false,
@@ -1006,6 +1006,24 @@
       "id": "m9KyLJz2",
       "createdAt": 1758262643840,
       "updatedAt": 1758262660139
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "amHWqhN6",
+      "tagsIds": [],
+      "description": null,
+      "name": "포인터랑 참조의 모든 것",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "c_cpp",
+          "value": "// 치트시트\n&x : x의 주소\nint& r = x; : x의 별칭(null 불가, 재바인딩 불가)\nint* p = &x; : x의 주소를 가진 변수(null 가능, 대상 변경 가능)\n*p : p가 가리키는 값\nconst int& : 읽기전용 참조(임시에도 바인딩)\nconst int* : 읽기전용 대상을 가리키는 포인터\nint* const : 포인터 자체가 const\n\n함수에서 “원본을 바꿔야” → 참조가 기본 / “선택적(없을 수도)” → 포인터\n\nvoid by_value(int v) { v = 100; }            // 복사본만 바뀜\nvoid by_ref(int& v)  { v = 200; }            // 원본이 바뀜\nvoid by_ptr(int* v)  { if(v) *v = 300; }     // 원본이 바뀔 수 있음(널체크 필요)\n\nint* p1 = &a;              // 포인터가 가리키는 값 수정 가능\nconst int* p2 = &a;        // (읽기전용) *p2 수정 불가, p2는 다른 주소로 변경 가능\nint* const p3 = &a;        // p3 자체는 고정, *p3 수정 가능\nconst int* const p4 = &a;  // p4 고정 + *p4 수정 불가\n\n// 배열과 포인터\nint arr[3] = {10,20,30};\nint* p = arr;             // 배열명은 첫 요소의 주소로 decay\nstd::cout << *p << \"\\n\";  // 10\nstd::cout << *(p+1) << \"\\n\"; // 20\nstd::cout << p[2] << \"\\n\";   // 30 (p[2] == *(p+2))"
+        }
+      ],
+      "id": "ckf_bU6b",
+      "createdAt": 1760077396967,
+      "updatedAt": 1760077741473
     }
   ],
   "tags": []
