@@ -954,12 +954,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/532/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/gamebit-sdk-unreal/PWChatSdkUnreal.uproject\" \\\n-build \\\\\n-configuration=Shipping \\\\\n-platform=IOS \\\\\n-cook \\\\\n-unversionedcookedcontent \\\\\n-stage \\\\\n-pak \\\\\n-archive \\\\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\\\n-utf8output \\\\\n-nop4 \\\\\n-allmaps \\\\\n-compressed \\\\\n-distribution \\\\\n-nosplash \\\\\n-nodebuginfo\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
+          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/544/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\\\n-configuration=Development \\\\\n-platform=IOS \\\\\n-cook \\\\\n-unversionedcookedcontent \\\\\n-stage \\\\\n-pak \\\\\n-archive \\\\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\\\n-utf8output \\\\\n-nop4 \\\\\n-allmaps \\\\\n-compressed \\\\\n-distribution \\\\\n-nosplash \\\\\n-nodebuginfo\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
         }
       ],
       "id": "hL-1akf-",
       "createdAt": 1750313069873,
-      "updatedAt": 1754557696124
+      "updatedAt": 1757570032799
     },
     {
       "isDeleted": false,
