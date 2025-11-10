@@ -86,6 +86,16 @@
       "id": "oe6RyYTi",
       "createdAt": 1758262616516,
       "updatedAt": 1758262633003
+    },
+    {
+      "name": "NC",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "t_YmPtNL",
+      "createdAt": 1762766726380,
+      "updatedAt": 1762766734519
     }
   ],
   "snippets": [
@@ -1078,6 +1088,24 @@
       "id": "XfhuJCDS",
       "createdAt": 1761635713799,
       "updatedAt": 1761635759019
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "t_YmPtNL",
+      "tagsIds": [],
+      "description": null,
+      "name": "Build snippet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "sh",
+          "value": "// 윈도우 퍼플웍스 빌드\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o 'C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived' --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject"
+        }
+      ],
+      "id": "kE7XNOCO",
+      "createdAt": 1762766739004,
+      "updatedAt": 1762766857981
     }
   ],
   "tags": []
