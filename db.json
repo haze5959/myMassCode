@@ -974,12 +974,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/544/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\\\n-configuration=Development \\\\\n-platform=IOS \\\\\n-cook \\\\\n-unversionedcookedcontent \\\\\n-stage \\\\\n-pak \\\\\n-archive \\\\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\\\n-utf8output \\\\\n-nop4 \\\\\n-allmaps \\\\\n-compressed \\\\\n-distribution \\\\\n-nosplash \\\\\n-nodebuginfo\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app"
+          "value": "커맨드 빌드\nRunUAT.bat BuildCookRun -project=C:\\Users\\oqkwon92\\Documents\\gamebit-sdk-unreal\\PWChatSdkUnreal.uproject -build -configuration=Shipping -targetplatform=Win64 -cook -stage -pak -compressed -prereqs -archive -archivedirectory=D:\\BuildAgent\\work\\f33c491abf9b84ef\\archived -package -utf8output -buildmachine -unattended -noP4 -nosplash -stdout -NoCodeSign\n\n/Users/ncsoft/Documents/ue_engine/544/Engine/Build/BatchFiles/RunUAT.sh BuildCookRun \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\\\n-configuration=Development \\\\\n-platform=IOS \\\\\n-cook \\\\\n-unversionedcookedcontent \\\\\n-stage \\\\\n-pak \\\\\n-archive \\\\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-package \\\\\n-utf8output \\\\\n-nop4 \\\\\n-allmaps \\\\\n-compressed \\\\\n-distribution \\\\\n-nosplash \\\\\n-nodebuginfo\n\n에디터 경로\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/Mac/UnrealEditor.app\n\nGenerate VS Project Files\n\"C:\\Program Files\\Epic Games\\UE_4.27\\Engine\\Build\\BatchFiles\\Build.bat\" SampleProjectEditor Win64 Development -Project=\"D:\\git\\purpleworks-sdk-unreal\\common\\SampleProject.uproject\" -WaitMutex -FromMsBuild"
         }
       ],
       "id": "hL-1akf-",
       "createdAt": 1750313069873,
-      "updatedAt": 1757570032799
+      "updatedAt": 1764142081036
     },
     {
       "isDeleted": false,
@@ -1106,6 +1106,24 @@
       "id": "kE7XNOCO",
       "createdAt": 1762766739004,
       "updatedAt": 1763715900492
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "t_YmPtNL",
+      "tagsIds": [],
+      "description": null,
+      "name": "SDK",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 퍼플웍스 빌드\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o 'C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived' --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject"
+        }
+      ],
+      "id": "godlKsdc",
+      "createdAt": 1764142062528,
+      "updatedAt": 1764142126411
     }
   ],
   "tags": []
