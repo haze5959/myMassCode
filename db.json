@@ -1124,6 +1124,24 @@
       "id": "godlKsdc",
       "createdAt": 1764142062528,
       "updatedAt": 1764142126411
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "amHWqhN6",
+      "tagsIds": [],
+      "description": null,
+      "name": "snippet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "c_cpp",
+          "value": "// UI는 게임스레드로\nAsyncTask(ENamedThreads::Type::GameThread,[]\n{\n});"
+        }
+      ],
+      "id": "9CriWdyr",
+      "createdAt": 1764917806780,
+      "updatedAt": 1764917828901
     }
   ],
   "tags": []
