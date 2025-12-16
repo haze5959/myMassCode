@@ -1100,12 +1100,12 @@
         {
           "label": "Fragment 1",
           "language": "sh",
-          "value": "// 윈도우 퍼플웍스 빌드\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o 'C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived' --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject\n\n// 맥 퍼플웍스 빌드\ncd /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/Build\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" -c Development /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject --network RC\n\n// 맥 플랫폼sdk 빌드\n/Users/ncsoft/Documents/ue_engine/544/Engine/Build/BatchFiles/RunUAT.sh \\\nBuildCookRun \\\n-nocompile \\\n-nocompileeditor \\\n-targetplatform=IOS \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\n-compressed \\\n-noP4 \\\n-cook \\\n-stage \\\n-allmaps \\\n-archive \\\n-package \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-clientconfig=Shipping \\\n-distribution \\\n-nodebuginfo"
+          "value": "// 윈도우 퍼플웍스 빌드\ncd C:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\Build\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject\n\n// 맥 퍼플웍스 빌드\ncd /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/Build\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" -c Development /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject --network RC\n\n// 맥 플랫폼sdk 빌드\n/Users/ncsoft/Documents/ue_engine/544/Engine/Build/BatchFiles/RunUAT.sh \\\nBuildCookRun \\\n-nocompile \\\n-nocompileeditor \\\n-targetplatform=IOS \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\n-compressed \\\n-noP4 \\\n-cook \\\n-stage \\\n-allmaps \\\n-archive \\\n-package \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-clientconfig=Shipping \\\n-distribution \\\n-nodebuginfo"
         }
       ],
       "id": "kE7XNOCO",
       "createdAt": 1762766739004,
-      "updatedAt": 1765434662256
+      "updatedAt": 1765862261769
     },
     {
       "isDeleted": false,
