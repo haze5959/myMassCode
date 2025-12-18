@@ -560,12 +560,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# Back-End\n- products 핸들러 개발\n- notes 핸들러 개발\n- images 스태틱 서버 개발 및 핸들러 개발\n- products의 flavors, rating은 주기적으로 집계해서 넣는 방식 구현\n\n# Front-End\n- 등록 노트들 보기 폴리싱\n- qr 제품 등록 플로우 폴리싱\n- 집 서버 연동\n- 제품 등록 플로우, 홈화면 데이터, 내 노트들 연동 확인\n-------여기까지가 MVP v1----------\n- 내 폰에 심고 한동안 자체 테스트\n------MVP v2 start------\n------MVP v2 end------\n- 스플레시 애니메이션\nhttps://youtu.be/Yz82uI-X98g?si=7EPqHi7eLGxVB09m\nhttps://youtu.be/ycL-EMZNUbU?si=dr5VfKuSPifp9sTH\n\n- 제품 화면\n\t- 스티키 해더\n  https://youtu.be/p4WOUj2kqkc?si=nFO7oVEl_-OE3d3I\n  https://youtu.be/cyVQJ31AYKs?si=lhUozSU8oh6Q0Ad5\n  - 이미지들 보기\n  https://youtu.be/c6lMKH5uKy8?si=YwiXmKhwC_d2siP4\n  https://youtu.be/BEGgrLxl3I4?si=W3NkEVPA7kn4D_D9\n  \n- 노트 등록\n\t- 칩 셀렉션\n  https://youtu.be/T82izB2XBMA?si=HUJ8AIDLA_4rd0ZY\n  \n- 최근 등록 노트들 보기\nhttps://youtu.be/M-iWP2l9-Xg?si=tbHG9fYX7ArdJlPx\n\n- 제품 검색\nhttps://youtu.be/SxqbE-TxpPY?si=xZFapjYYrvVHsLV1\n  \n- 공통\n\t- 텍스트 필드 밸리데이션 애니메이션, 팝업 애니메이션\n  https://youtu.be/JsrVJvKv5fs?si=PeyPk34saLmrAWbY\n  SFSymbol ani\n  https://www.youtube.com/watch?v=NBPBe7MmPJ0\n\nhttps://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\nTipKit 사용해보기\n- 도네 요구하기\n\n평점 올리기\nhttps://youtu.be/4Bvl6jcjRJg?si=p0AGoBfgQrcdYYUI\n\n구독 시트\nhttps://www.youtube.com/watch?v=6Kb8NWE8DXE\n\n컨트롤센터에 바코드찍기 바로가기 만들기"
+          "value": "# Back-End\n- products 핸들러 개발\n- notes 핸들러 개발\n- images 스태틱 서버 개발 및 핸들러 개발\n- products의 flavors, rating은 주기적으로 집계해서 넣는 방식 구현\n- 포트포워딩으로 자체 테스트 가능하게 배포\n\n# Front-End\n- 등록 노트들 보기 폴리싱\n- qr 제품 등록 플로우 폴리싱\n- 집 서버 연동\n- 제품 등록 플로우, 홈화면 데이터, 내 노트들 연동 확인\n-------여기까지가 MVP v1----------\n- 내 폰에 심고 한동안 자체 테스트\n------MVP v2 start------\n------MVP v2 end------\n- 스플레시 애니메이션\nhttps://youtu.be/Yz82uI-X98g?si=7EPqHi7eLGxVB09m\nhttps://youtu.be/ycL-EMZNUbU?si=dr5VfKuSPifp9sTH\n\n- 제품 화면\n\t- 스티키 해더\n  https://youtu.be/p4WOUj2kqkc?si=nFO7oVEl_-OE3d3I\n  https://youtu.be/cyVQJ31AYKs?si=lhUozSU8oh6Q0Ad5\n  - 이미지들 보기\n  https://youtu.be/c6lMKH5uKy8?si=YwiXmKhwC_d2siP4\n  https://youtu.be/BEGgrLxl3I4?si=W3NkEVPA7kn4D_D9\n  \n- 노트 등록\n\t- 칩 셀렉션\n  https://youtu.be/T82izB2XBMA?si=HUJ8AIDLA_4rd0ZY\n  \n- 최근 등록 노트들 보기\nhttps://youtu.be/M-iWP2l9-Xg?si=tbHG9fYX7ArdJlPx\n\n- 제품 검색\nhttps://youtu.be/SxqbE-TxpPY?si=xZFapjYYrvVHsLV1\n  \n- 공통\n\t- 텍스트 필드 밸리데이션 애니메이션, 팝업 애니메이션\n  https://youtu.be/JsrVJvKv5fs?si=PeyPk34saLmrAWbY\n  SFSymbol ani\n  https://www.youtube.com/watch?v=NBPBe7MmPJ0\n\nhttps://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\nTipKit 사용해보기\n- 도네 요구하기\n\n평점 올리기\nhttps://youtu.be/4Bvl6jcjRJg?si=p0AGoBfgQrcdYYUI\n\n구독 시트\nhttps://www.youtube.com/watch?v=6Kb8NWE8DXE\n\n컨트롤센터에 바코드찍기 바로가기 만들기\n\n# Admin Page\n- 최근 등록 제품 보기\n- 등록 제품 정보 수정"
         }
       ],
       "id": "ltPExcke",
       "createdAt": 1726808499416,
-      "updatedAt": 1764667672577
+      "updatedAt": 1765961646185
     },
     {
       "isDeleted": false,
@@ -1118,12 +1118,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 퍼플웍스 빌드\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o 'C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived' --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject"
+          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());"
         }
       ],
       "id": "godlKsdc",
       "createdAt": 1764142062528,
-      "updatedAt": 1764142126411
+      "updatedAt": 1765953599969
     },
     {
       "isDeleted": false,
