@@ -452,12 +452,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "```mermaid\nerDiagram\n    <!-- 관계 -->\n    PRODUCT ||--|{ BARCODE : \"product_id(DELETE CASCADE)\"\n    PRODUCT ||--|{ NOTE : \"product_id\"\n    PRODUCT ||--|{ FAVORITE : \"product_id(DELETE CASCADE)\"\n    PRODUCT ||--|{ PRODUCT_IMAGE : \"product_id(DELETE CASCADE)\"\n\t\tPRODUCT ||--|{ FLAVOR_TAG_N : \"product_id(DELETE CASCADE)\"\n    \n    USER ||--|{ FAVORITE : user_id\n    USER ||--|{ NOTE : user_id\n    \n    NOTE ||--|{ PRODUCT_IMAGE : note_id\n    NOTE ||--|{ FLAVOR_TAG_N : note_id\n\n\t\t<!-- 테이블 -->\n    PRODUCT {\n        uuid id PK\n        string name\n\t\t\t\tstring desc_N\n        int rating_N\n        jsonb flavors_N\n        int type \"0: 위스키, 1: 와인, 2: 맥주, 99: 기타\"\n    }\n    \n    BARCODE {\n        uuid id PK\n        uuid product_id PK\n        string barcode_id\n    }\n    \n    NOTE {\n        uuid id PK\n        uuid user_id\n\t\t\t\tuuid product_id\n        string body\n        int rating_N\n        int public_scope_N \"0: 비공개, 1: 친구공개, 2: 전체공개\"\n        date registered\n    }\n    \n    USER {\n  \t\t\tuuid user_id PK\n        string sub\n  \t\t\tstring nick_name\n    }\n\n    FAVORITE {\n    \t\tuuid id PK\n    \t\tuuid product_id\n  \t\t\tuuid user_id\n    }\n    \n    PRODUCT_IMAGE {\n    \t\tuuid id PK\n        uuid product_id\n        uuid note_id\n        uuid user_id\n    }\n    \n    FLAVOR_TAG_N {\n    \t\tuuid id PK\n        int flavor \"0: Sweet, 1: Sour, 2: Bitter, 3: Salty, 4: Umami\"\n    \t\tuuid product_id\n\t\t\t\tuuid note_id\n    }\n```"
+          "value": "```mermaid\nerDiagram\n    <!-- 관계 -->\n    PRODUCT ||--|{ BARCODE : \"product_id(DELETE CASCADE)\"\n    PRODUCT ||--|{ NOTE : \"product_id\"\n    PRODUCT ||--|{ FAVORITE : \"product_id(DELETE CASCADE)\"\n    PRODUCT ||--|{ PRODUCT_IMAGE : \"product_id(DELETE CASCADE)\"\n\t\tPRODUCT ||--|{ FLAVOR_TAG : \"product_id(DELETE CASCADE)\"\n    \n    USER ||--|{ FAVORITE : user_id\n    USER ||--|{ NOTE : user_id\n    \n    NOTE ||--|{ PRODUCT_IMAGE : \"note_id(DELETE CASCADE)\"\n    NOTE ||--|{ FLAVOR_TAG : \"note_id(DELETE CASCADE)\"\n\n\t\t<!-- 테이블 -->\n    PRODUCT {\n        uuid id PK\n        string name\n\t\t\t\tstring desc\n        int rating\n        jsonb flavors\n        int type \"0: 위스키, 1: 와인, 2: 맥주, 99: 기타\"\n    }\n    \n    BARCODE {\n        uuid id PK\n        uuid product_id PK\n        string barcode_id\n    }\n    \n    NOTE {\n        uuid id PK\n        uuid user_id\n\t\t\t\tuuid product_id\n        string body\n        int rating \"1~10\"\n        int public_scope \"0: 비공개, 1: 친구공개, 2: 전체공개\"\n        date registered\n    }\n    \n    USER {\n  \t\t\tuuid user_id PK\n        string sub\n  \t\t\tstring nick_name\n    }\n\n    FAVORITE {\n    \t\tuuid id PK\n    \t\tuuid product_id\n  \t\t\tuuid user_id\n    }\n    \n    PRODUCT_IMAGE {\n    \t\tuuid id PK\n        uuid product_id\n        uuid note_id\n        uuid user_id\n    }\n    \n    FLAVOR_TAG {\n    \t\tuuid id PK\n        int flavor \"0: Sweet, 1: Sour, 2: Bitter, 3: Salty, 4: Umami\"\n    \t\tuuid product_id\n\t\t\t\tuuid note_id\n    }\n```"
         }
       ],
       "id": "1SK7IU5F",
       "createdAt": 1698460168612,
-      "updatedAt": 1764659915313
+      "updatedAt": 1766158123377
     },
     {
       "isDeleted": false,
@@ -529,7 +529,7 @@
       ],
       "id": "TNLZBaE9",
       "createdAt": 1726580854639,
-      "updatedAt": 1746519343016
+      "updatedAt": 1766152044979
     },
     {
       "isDeleted": true,
