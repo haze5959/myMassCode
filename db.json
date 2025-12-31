@@ -992,12 +992,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n\n# 커밋 취소하기\ngit reset HEAD^\n\n# commit msg 규칙\n- feature: 새로운 기능 추가\n- fix: 버그 수정\n- perf: 성능 개선\n- refactor: 버그를 수정하거나 기능을 추가하지 않는 코드 변경, 리팩토링\n- style: 코드 의미에 영향을 주지 않는 변경사항 (white space, formatting, colons)\n- test: 누락된 테스트 추가 또는 기존 테스트 수정\n- revert: 작업 되돌리기\n- chore: 패키지 매니저 설정할 경우, 코드 수정 없이 설정을 변경\n- build: 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨), ci구성파일 및 스크립트 변경\n- docs: documentation 변경"
+          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n윈도우에서는 소스트리 도구에서 'SSH 관리자 실행'\n\n# 커밋 취소하기\ngit reset HEAD^\n\n# commit msg 규칙\n- feature: 새로운 기능 추가\n- fix: 버그 수정\n- perf: 성능 개선\n- refactor: 버그를 수정하거나 기능을 추가하지 않는 코드 변경, 리팩토링\n- style: 코드 의미에 영향을 주지 않는 변경사항 (white space, formatting, colons)\n- test: 누락된 테스트 추가 또는 기존 테스트 수정\n- revert: 작업 되돌리기\n- chore: 패키지 매니저 설정할 경우, 코드 수정 없이 설정을 변경\n- build: 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨), ci구성파일 및 스크립트 변경\n- docs: documentation 변경"
         }
       ],
       "id": "ZIDOPPnM",
       "createdAt": 1750645957518,
-      "updatedAt": 1758162356618
+      "updatedAt": 1767080267247
     },
     {
       "isDeleted": false,
