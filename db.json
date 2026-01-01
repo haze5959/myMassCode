@@ -118,24 +118,6 @@
       "updatedAt": 1766559185297
     },
     {
-      "isDeleted": true,
-      "isFavorites": false,
-      "folderId": "",
-      "tagsIds": [],
-      "description": null,
-      "name": "Untitled snippet",
-      "content": [
-        {
-          "label": "Fragment 1",
-          "language": "plain_text",
-          "value": ""
-        }
-      ],
-      "id": "fIdLzchw",
-      "createdAt": 1697954691101,
-      "updatedAt": 1697954769186
-    },
-    {
       "isDeleted": false,
       "isFavorites": false,
       "folderId": "vhYiJDpn",
@@ -524,30 +506,13 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 공통 규칙\n## common header\n```json\n{\"authorization\": \"Bearer ACCESS_TOKEN\"}\n```\n## common response model\n```json\n// success\n{\n\t\"result\": true,\n\t\"data\": data model\n}\n\n// fail\n{\n\t\"result\": false,\n\t\"error\": {\n\t\t\"code\": 9999,\n\t\t\"msg\": \"unknown\"\n\t}\n}\n```\n\n# users\n## post\n### path: users/\n#### body\n```json\n{\"nick\": \"name\"}\n```\n#### response data\n- User model\n\n## get\n### path: users/\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/:id\n#### response data\n- User model\n\n### path: users/me\n#### response data\n- User model\n\n### path: users/search\n#### query\n- nick\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/favorites\n#### response data\n```json\n{\"product_ids\": Product Id Array}\n```\n\n## put\n### path: users/me\n#### body\n```json\n{\"nick\": \"nick name\"}\n```\n\n## delete\n### path: users/me\n#### response data\n- null\n\n# products\n## post\n### path: products/\n#### body\n```json\n{\"name\": \"product name\",\n\"desc\": String(Optional),\n\"type\": 1,\n\"barcode_id\": optional}\n```\n#### response data\n- Product model\n\n## get\n### path: products/:id\n#### response data\n```json\n{\"product\": Product model,\n\"image_ids\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/barcode/:barcode_id\n#### response data\n```json\n{\"product\": Product model,\n\"image_ids\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/\n#### query\n- page\n- per\n- name(optional)\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"image_ids\": [ProductImage id(최대 3개)]}\n]}\n```\n\n### path: products/favorite\n#### query\n- page\n- per\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"image_ids\": [ProductImage id(최대 3개)]}\n]}\n```\n\n## put\n## delete\n### path: products/:id(안씀)\n#### response data\n- null\n\n# notes\n## post\n### path: notes/\n#### body\n```json\n{\"product_id\": \"product_id\",\n\"body\": \"body\",\n\"rating\": 10,\n\"selectedFlavors\": [1, 2, 3],\n\"image_ids\": [ProductImage id],\n\"is_public\": true}\n```\n#### response data\n- Note model\n\n## get\n### path: notes/:id\n#### response data\n```json\n{\"note\": Note model,\n\"product\": Product model,\n\"user\": User model(Optional),\n\"image_ids\": [ProductImage id]}\n```\n\n### path: notes/\n#### query\n- page\n- per\n- product_id(optional)\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"image_ids\": [ProductImage id](최대 3개)}\n]}\n```\n\n### path: notes/user/:id\n#### query\n- page\n- per\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"image_ids\": [ProductImage id](최대 3개)}\n]}\n```\n\n## put\n### path: notes/:id\n#### body\n- Note model\n\n## delete\n### path: notes/:id\n#### response data\n- null\n\n# images\n## get\n### path: images/\n#### query\n- page\n- per\n- product_id(optional)\n#### response data\n```json\n{\n\t\"ids\": [\"7c9e6679-7425-40de-944b-e07fc1f90ae7\", ...]\n}\n```\n## post\n### path: images/\n#### header\n- Content-Type: multipart/form-data\n#### body\n```json\n{\"product_id\": product_id(Optional)\n\"note_id\": note_id(Optional)}\n```\n#### response data\n```json\n{\n\t\"id\": \"7c9e6679-7425-40de-944b-e07fc1f90ae7\"\n}\n```\n## delete\n### path: images/:id\n#### response data\n- null\n\n# btn\n## get\n### path: btn/home\n#### response data\n```json\n{\"recentNotes\": [{\n\t\"note\": Note model,\n\t\"product\": Product model,\n\t\"user\": User model,\n\t\"image_ids\": [ProductImage id]\n}],\n\"recentProducts\": [{\n\t\"product\": Product model,\n\t\"image_ids\": [ProductImage id]\n}]}\n```"
+          "value": "# 공통 규칙\n## common header\n```json\n{\"authorization\": \"Bearer ACCESS_TOKEN\"}\n```\n## common response model\n```json\n// success\n{\n\t\"result\": true,\n\t\"data\": data model\n}\n\n// fail\n{\n\t\"result\": false,\n\t\"error\": {\n\t\t\"code\": 9999,\n\t\t\"msg\": \"unknown\"\n\t}\n}\n```\n\n# users\n## post\n### path: users/\n#### body\n```json\n{\"nick\": \"name\"}\n```\n#### response data\n```json\n{\"user\": User model}\n```\n\n## get\n### path: users/\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/:id\n#### response data\n```json\n{\"user\": User model}\n```\n\n### path: users/me\n#### response data\n```json\n{\"user\": User model}\n```\n\n### path: users/search\n#### query\n- nick\n#### response data\n```json\n{\"users\": [User model]}\n```\n\n### path: users/favorites\n#### response data\n```json\n{\"product_ids\": Product Id Array}\n```\n\n## put\n### path: users/me\n#### body\n```json\n{\"nick\": \"nick name\"}\n```\n\n## delete\n### path: users/me\n#### response data\n- null\n\n# products\n## post\n### path: products/\n#### body\n```json\n{\"name\": \"product name\",\n\"desc\": String(Optional),\n\"type\": 1,\n\"barcode_id\": optional}\n```\n#### response data\n```json\n{\"product\": Product model}\n```\n\n## get\n### path: products/:id\n#### response data\n```json\n{\"product\": Product model,\n\"image_ids\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/barcode/:barcode_id\n#### response data\n```json\n{\"product\": Product model,\n\"image_ids\": [ProductImage id],\n\"favorite_count\": count}\n```\n\n### path: products/\n#### query\n- page\n- per\n- name(optional)\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"image_ids\": [ProductImage id(최대 3개)]}\n]}\n```\n\n### path: products/favorite\n#### query\n- page\n- per\n#### response data\n```json\n{\"products\": [\n  {\"product\": Product model,\n  \"image_ids\": [ProductImage id(최대 3개)]}\n]}\n```\n\n## put\n## delete\n### path: products/:id(안씀)\n#### response data\n- null\n\n# notes\n## post\n### path: notes/\n#### body\n```json\n{\"product_id\": \"product_id\",\n\"body\": \"body\",\n\"rating\": 10,\n\"selectedFlavors\": [1, 2, 3],\n\"image_ids\": [ProductImage id],\n\"is_public\": true}\n```\n#### response data\n```json\n{\"note\": Note model}\n```\n\n## get\n### path: notes/:id\n#### response data\n```json\n{\"note\": Note model,\n\"product\": Product model,\n\"user\": User model(Optional),\n\"image_ids\": [ProductImage id]}\n```\n\n### path: notes/\n#### query\n- page\n- per\n- product_id(optional)\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"image_ids\": [ProductImage id](최대 3개)}\n]}\n```\n\n### path: notes/user/:id\n#### query\n- page\n- per\n#### response data\n```json\n{\"notes\": [\n  {\"note\": Note model,\n  \"product\": Product model,\n  \"user\": User model(Optional),\n  \"image_ids\": [ProductImage id](최대 3개)}\n]}\n```\n\n## put\n### path: notes/:id\n#### body\n```json\n{\"note\": Note model}\n```\n\n## delete\n### path: notes/:id\n#### response data\n- null\n\n# images\n## post\n### path: images/\n#### header\n- Content-Type: multipart/form-data\n#### body\n```json\n{\"product_id\": product_id(Optional)\n\"note_id\": note_id(Optional)}\n```\n#### response data\n```json\n{\n\t\"id\": \"7c9e6679-7425-40de-944b-e07fc1f90ae7\"\n}\n```\n## delete\n### path: images/:id\n#### response data\n- null\n\n# btn\n## get\n### path: btn/home\n#### response data\n```json\n{\"recent_notes\": [Note model],\n\"recent_products\": [Product model]}\n```"
         }
       ],
       "id": "TNLZBaE9",
       "createdAt": 1726580854639,
       "updatedAt": 1767014777288
-    },
-    {
-      "isDeleted": true,
-      "isFavorites": false,
-      "folderId": "",
-      "tagsIds": [],
-      "description": null,
-      "name": "Untitled snippet",
-      "content": [
-        {
-          "label": "Fragment 1",
-          "language": "plain_text",
-          "value": ""
-        }
-      ],
-      "id": "-NJfntp1",
-      "createdAt": 1726584274937,
-      "updatedAt": 1726584298366
+      "updatedAt": 1767085972527
     },
     {
       "isDeleted": false,
@@ -560,12 +525,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# Back-End\n- products의 flavors, rating은 주기적으로 집계해서 넣는 방식 구현\n-------MVP v2----------\n- 기능 제안 및 정보 신고\n\t- https://slashpage.com/repov/xjqy1g2vqw3y7m6vd54z 이용하기\n- btn/home 캐시화\n\n# Front-End\n- 등록 노트들 보기 폴리싱\n- 로그인 화면 구현\n- 로그인/회원가입 성공 시점에\n  @Dependency(\\.accessTokenClient).save(.init(value: tokenString))을 호출하고,\n  로그아웃 시 clear()를 호출하는 흐름을 추가해 주세요.\n- 집 서버 연동(http://220.94.171.173:15959/users)\n- 제품 등록 플로우, 홈화면 데이터, 내 노트들 연동 확인\n-------여기까지가 MVP v1----------\n- 내 폰에 심고 한동안 자체 테스트\n------MVP v2------\n- 노트 수정하기\n- 제품 정보 신고하기\n- 제품 검색하기\n\t- 바코드로 검색하기\n- 설정\n\t- 닉네임, 프로필 이미지 바꾸기\n------MVP v3------\n- 스플레시 애니메이션\nhttps://youtu.be/Yz82uI-X98g?si=7EPqHi7eLGxVB09m\nhttps://youtu.be/ycL-EMZNUbU?si=dr5VfKuSPifp9sTH\n- 나만의 바\n- 구독 페이지\n- 스토어 올리기\n- 어드민 페이지\n\n- 제품 화면\n\t- 스티키 해더\n  https://youtu.be/p4WOUj2kqkc?si=nFO7oVEl_-OE3d3I\n  https://youtu.be/cyVQJ31AYKs?si=lhUozSU8oh6Q0Ad5\n  - 이미지들 보기\n  https://youtu.be/c6lMKH5uKy8?si=YwiXmKhwC_d2siP4\n  https://youtu.be/BEGgrLxl3I4?si=W3NkEVPA7kn4D_D9\n  \n- 최근 등록 노트들 보기\nhttps://youtu.be/M-iWP2l9-Xg?si=tbHG9fYX7ArdJlPx\n\n- 제품 검색\nhttps://youtu.be/SxqbE-TxpPY?si=xZFapjYYrvVHsLV1\n  \n- 공통\n\t- 텍스트 필드 밸리데이션 애니메이션, 팝업 애니메이션\n  https://youtu.be/JsrVJvKv5fs?si=PeyPk34saLmrAWbY\n  SFSymbol ani\n  https://www.youtube.com/watch?v=NBPBe7MmPJ0\n\nhttps://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\nTipKit 사용해보기\n- 도네 요구하기\n\n평점 올리기\nhttps://youtu.be/4Bvl6jcjRJg?si=p0AGoBfgQrcdYYUI\n\n구독 시트\nhttps://www.youtube.com/watch?v=6Kb8NWE8DXE\n\n컨트롤센터에 바코드찍기 바로가기 만들기\n\n# Admin Page\n- 최근 등록 제품 보기\n- 등록 제품 정보 수정"
+          "value": "# Back-End\n- products의 flavors, rating은 주기적으로 집계해서 넣는 방식 구현\n-------MVP v2----------\n- 기능 제안 및 정보 신고\n\t- https://slashpage.com/repov/xjqy1g2vqw3y7m6vd54z 이용하기\n- post put 메서드 호출 기능들 트랜젝으로 묶기\n\n# Front-End\n- 등록 노트들 보기 폴리싱\n- 로그인 화면 구현\n- 로그인/회원가입 성공 시점에\n  @Dependency(\\.accessTokenClient).save(.init(value: tokenString))을 호출하고,\n  로그아웃 시 clear()를 호출하는 흐름을 추가해 주세요.\n- 집 서버 연동(http://220.94.171.173:15959/users)\n- 제품 등록 플로우, 홈화면 데이터, 내 노트들 연동 확인\n-------여기까지가 MVP v1----------\n- 내 폰에 심고 한동안 자체 테스트\n------MVP v2------\n- 노트 수정하기\n- 제품 정보 신고하기\n- 제품 검색하기\n\t- 바코드로 검색하기\n- 설정\n\t- 닉네임, 프로필 이미지 바꾸기\n------MVP v3------\n- 스플레시 애니메이션\nhttps://youtu.be/Yz82uI-X98g?si=7EPqHi7eLGxVB09m\nhttps://youtu.be/ycL-EMZNUbU?si=dr5VfKuSPifp9sTH\n- 나만의 바\n- 구독 페이지\n- 스토어 올리기\n- 어드민 페이지\n- 내 노트 달력으로 리스팅하기\n\n- 제품 화면\n\t- 스티키 해더\n  https://youtu.be/p4WOUj2kqkc?si=nFO7oVEl_-OE3d3I\n  https://youtu.be/cyVQJ31AYKs?si=lhUozSU8oh6Q0Ad5\n  - 이미지들 보기\n  https://youtu.be/c6lMKH5uKy8?si=YwiXmKhwC_d2siP4\n  https://youtu.be/BEGgrLxl3I4?si=W3NkEVPA7kn4D_D9\n  \n- 최근 등록 노트들 보기\nhttps://youtu.be/M-iWP2l9-Xg?si=tbHG9fYX7ArdJlPx\n\n- 제품 검색\nhttps://youtu.be/SxqbE-TxpPY?si=xZFapjYYrvVHsLV1\n  \n- 공통\n\t- 텍스트 필드 밸리데이션 애니메이션, 팝업 애니메이션\n  https://youtu.be/JsrVJvKv5fs?si=PeyPk34saLmrAWbY\n  SFSymbol ani\n  https://www.youtube.com/watch?v=NBPBe7MmPJ0\n\nhttps://youtu.be/l7eut-nYIUc\n- contentUnavailableView\n- symbol effect\n\nhttps://youtu.be/4dbnfyXILc4\n- 다크모드 버튼\n\nTipKit 사용해보기\n- 도네 요구하기\n\n평점 올리기\nhttps://youtu.be/4Bvl6jcjRJg?si=p0AGoBfgQrcdYYUI\n\n구독 시트\nhttps://www.youtube.com/watch?v=6Kb8NWE8DXE\n\n컨트롤센터에 바코드찍기 바로가기 만들기\n\n# Admin Page\n- 최근 등록 제품 보기\n- 등록 제품 정보 수정"
         }
       ],
       "id": "ltPExcke",
       "createdAt": 1726808499416,
-      "updatedAt": 1767014305754
+      "updatedAt": 1767156274656
     },
     {
       "isDeleted": false,
@@ -692,24 +657,6 @@
       "id": "JLhDyde9",
       "createdAt": 1737454571967,
       "updatedAt": 1738313131208
-    },
-    {
-      "isDeleted": true,
-      "isFavorites": false,
-      "folderId": "qzhsCzAb",
-      "tagsIds": [],
-      "description": null,
-      "name": "라이브러리 작성하기",
-      "content": [
-        {
-          "label": "Fragment 1",
-          "language": "rust",
-          "value": "library는 lib.rs라 불리는 파일에 root module을 갖고 있습니다.\n\n// 이 macro는 Rust가 테스트 모드가 아닐 경우\n// 이 inline module을 제거합니다.\n#[cfg(test)]\nmod tests {\n    // 부모 module에 즉시 접근이 가능하지 않다는 데에 주의하세요.\n    // 반드시 명시적으로 써줘야 합니다.\n    use super::*;\n\n    ... tests go here ...\n}\n\n// 내부 모듈 참조하기\ncrate - root module\nsuper - 현재 module의 부모 module\nself - 현재 module\n\n"
-        }
-      ],
-      "id": "TdeRy_EO",
-      "createdAt": 1738303592238,
-      "updatedAt": 1742101430942
     },
     {
       "isDeleted": false,
@@ -992,12 +939,12 @@
         {
           "label": "Fragment 1",
           "language": "markdown",
-          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n\n# 커밋 취소하기\ngit reset HEAD^\n\n# commit msg 규칙\n- feature: 새로운 기능 추가\n- fix: 버그 수정\n- perf: 성능 개선\n- refactor: 버그를 수정하거나 기능을 추가하지 않는 코드 변경, 리팩토링\n- style: 코드 의미에 영향을 주지 않는 변경사항 (white space, formatting, colons)\n- test: 누락된 테스트 추가 또는 기존 테스트 수정\n- revert: 작업 되돌리기\n- chore: 패키지 매니저 설정할 경우, 코드 수정 없이 설정을 변경\n- build: 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨), ci구성파일 및 스크립트 변경\n- docs: documentation 변경"
+          "value": "# 맥에서 ssh 안먹힐때는\nssh-add ~/.ssh/id_rsa\n윈도우에서는 소스트리 도구에서 'SSH 관리자 실행'\n\n# 커밋 취소하기\ngit reset HEAD^\n\n# commit msg 규칙\n- feature: 새로운 기능 추가\n- fix: 버그 수정\n- perf: 성능 개선\n- refactor: 버그를 수정하거나 기능을 추가하지 않는 코드 변경, 리팩토링\n- style: 코드 의미에 영향을 주지 않는 변경사항 (white space, formatting, colons)\n- test: 누락된 테스트 추가 또는 기존 테스트 수정\n- revert: 작업 되돌리기\n- chore: 패키지 매니저 설정할 경우, 코드 수정 없이 설정을 변경\n- build: 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨), ci구성파일 및 스크립트 변경\n- docs: documentation 변경"
         }
       ],
       "id": "ZIDOPPnM",
       "createdAt": 1750645957518,
-      "updatedAt": 1758162356618
+      "updatedAt": 1767080267247
     },
     {
       "isDeleted": false,
@@ -1052,24 +999,6 @@
       "id": "gIPIzaP2",
       "createdAt": 1761283989786,
       "updatedAt": 1761284102063
-    },
-    {
-      "isDeleted": true,
-      "isFavorites": false,
-      "folderId": "",
-      "tagsIds": [],
-      "description": null,
-      "name": "Untitled snippet",
-      "content": [
-        {
-          "label": "Fragment 1",
-          "language": "plain_text",
-          "value": ""
-        }
-      ],
-      "id": "8L4qziP_",
-      "createdAt": 1761283996830,
-      "updatedAt": 1761283999456
     },
     {
       "isDeleted": false,
@@ -1142,6 +1071,24 @@
       "id": "9CriWdyr",
       "createdAt": 1764917806780,
       "updatedAt": 1764917828901
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "vs7wRccf",
+      "tagsIds": [],
+      "description": null,
+      "name": "Claude",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "plain_text",
+          "value": "claude --resume or claude -r:\t저장된 세션 목록에서 선택하여 대화 재개\nclaude --continue or claude -c:\t가장 최근 세션을 즉시 이어서 시작\n\nPlan Mode:\tAlt + M 토글(코드 수정없이 읽기/검색/분석위주로 수행)"
+        }
+      ],
+      "id": "pu4tMO3I",
+      "createdAt": 1767084775183,
+      "updatedAt": 1767084969939
     }
   ],
   "tags": []
