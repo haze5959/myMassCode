@@ -100,7 +100,7 @@
   ],
   "snippets": [
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "",
       "tagsIds": [],
@@ -115,7 +115,7 @@
       ],
       "id": "QzSjpbSJ",
       "createdAt": 1697953982822,
-      "updatedAt": 1769396849352
+      "updatedAt": 1770021737780
     },
     {
       "isDeleted": false,
@@ -424,7 +424,7 @@
       "updatedAt": 1762158832264
     },
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "",
       "tagsIds": [],
@@ -439,7 +439,7 @@
       ],
       "id": "1SK7IU5F",
       "createdAt": 1698460168612,
-      "updatedAt": 1767534433699
+      "updatedAt": 1770021739550
     },
     {
       "isDeleted": false,
@@ -496,7 +496,7 @@
       "updatedAt": 1737682987408
     },
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "",
       "tagsIds": [],
@@ -511,10 +511,10 @@
       ],
       "id": "TNLZBaE9",
       "createdAt": 1726580854639,
-      "updatedAt": 1769399893925
+      "updatedAt": 1770021735080
     },
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "",
       "tagsIds": [],
@@ -529,7 +529,7 @@
       ],
       "id": "ltPExcke",
       "createdAt": 1726808499416,
-      "updatedAt": 1769530663706
+      "updatedAt": 1770021732372
     },
     {
       "isDeleted": false,
@@ -1000,7 +1000,7 @@
       "updatedAt": 1761284102063
     },
     {
-      "isDeleted": false,
+      "isDeleted": true,
       "isFavorites": false,
       "folderId": "",
       "tagsIds": [],
@@ -1015,7 +1015,7 @@
       ],
       "id": "XfhuJCDS",
       "createdAt": 1761635713799,
-      "updatedAt": 1761635759019
+      "updatedAt": 1770021741287
     },
     {
       "isDeleted": false,
