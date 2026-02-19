@@ -1100,12 +1100,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "# UBT 빌드 방법\n## 1. 기존 UBT 제거\nrm -rf Engine/Binaries/DotNET/UnrealBuildTool\nrm -rf Engine/Intermediate/Build/UnrealBuildTool\n\n### dot 서명 관련 에러 나오면\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/ThirdParty/DotNet\n\n//4.27의 경우\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/427/Engine/Binaries/Mac\n\n## 2. UBT 빌드\ncd Engine/Source/Programs/UnrealBuildTool\ndotnet build UnrealBuildTool.csproj -c Development\n\n# ‘UnrealEditor-Cmd’을(를) 열지 않음 팝업이 나오면\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/544/Engine\n\n# Metal 에러 및 에디터 관련 에러\n// 메탈 툴체인 다운로드\nxcodebuild -downloadComponent MetalToolchain\n// 에디터 한번 열어봐야함\n/Engine/Binaries/Mac/UnrealEditor.app"
+          "value": "# UBT 빌드 방법\n## 1. 기존 UBT 제거\nrm -rf Engine/Binaries/DotNET/UnrealBuildTool\nrm -rf Engine/Intermediate/Build/UnrealBuildTool\n\n### dot 서명 관련 에러 나오면\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/544/Engine/Binaries/ThirdParty/DotNet\n\n//4.27의 경우\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/UE_4.27/Engine/Binaries/Mac\n\n## 2. UBT 빌드\ncd Engine/Source/Programs/UnrealBuildTool\ndotnet build UnrealBuildTool.csproj -c Development\n\n# ‘UnrealEditor-Cmd’을(를) 열지 않음 팝업이 나오면\nxattr -dr com.apple.quarantine \\\n/Users/ncsoft/Documents/ue_engine/544/Engine\n\n# Metal 에러 및 에디터 관련 에러\n// 메탈 툴체인 다운로드\nxcodebuild -downloadComponent MetalToolchain\n// 에디터 한번 열어봐야함\n/Engine/Binaries/Mac/UnrealEditor.app"
         }
       ],
       "id": "TadnC9zN",
       "createdAt": 1770614814773,
-      "updatedAt": 1770703646213
+      "updatedAt": 1771474786484
     }
   ],
   "tags": []
