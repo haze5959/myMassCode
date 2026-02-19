@@ -147,7 +147,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "모든 속성"
+              "title": "All properties"
             }
           },
           {
@@ -197,9 +197,9 @@
   "active": "ea53010e80c7c41a",
   "lastOpenFiles": [
     "3. API.md",
+    "2. ERD.md",
     "4. TODO.md",
     "1. 기획.md",
-    "2. ERD.md",
     "테스트 바코드.md",
     "무제 3.base",
     "무제.base",
