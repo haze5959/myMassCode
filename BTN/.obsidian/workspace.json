@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "6f6bd4e09355beb0",
+        "id": "27558a74bcec0221",
         "type": "tabs",
         "children": [
           {
-            "id": "a55f4c0c76c6dc05",
+            "id": "9a4bd2dbd4ba11f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4. TODO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4. TODO"
+            }
+          },
+          {
+            "id": "5c3d160e184a9665",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +35,8 @@
               "title": "4. TODO"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,10 +209,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "a55f4c0c76c6dc05",
+  "active": "5c3d160e184a9665",
   "lastOpenFiles": [
-    "3. API.md",
+    "운영.md",
+    "ddns_log.txt",
     "4. TODO.md",
+    "3. API.md",
     "2. ERD.md",
     "1. 기획.md",
     "제품 정보 검색 링크.md",
