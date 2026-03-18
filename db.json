@@ -96,6 +96,16 @@
       "id": "t_YmPtNL",
       "createdAt": 1762766726380,
       "updatedAt": 1762766734519
+    },
+    {
+      "name": "DB",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "ks-J6vzL",
+      "createdAt": 1773842586362,
+      "updatedAt": 1773842594024
     }
   ],
   "snippets": [
@@ -1106,6 +1116,24 @@
       "id": "TadnC9zN",
       "createdAt": 1770614814773,
       "updatedAt": 1771575024335
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "ks-J6vzL",
+      "tagsIds": [],
+      "description": null,
+      "name": "SQL",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "sql",
+          "value": "SELECT * FROM public.products\nORDER BY registered DESC LIMIT 100\n\nSELECT * FROM public.product_images \nWHERE id = '550e8400-e29b-41d4-a716-446655440000';\n\nSELECT * FROM public.products\nWHERE id = 'a1bcf1e2-2ceb-45cb-897d-89a86a224e60' \n   OR id = '2c86966e-1587-4f2d-aca0-8bcdfbdb30b7';"
+        }
+      ],
+      "id": "SZtoH111",
+      "createdAt": 1773842598872,
+      "updatedAt": 1773842735783
     }
   ],
   "tags": []
