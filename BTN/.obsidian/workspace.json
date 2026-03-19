@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. API.md",
+                "file": "4. TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. API"
+              "title": "4. TODO"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3. API.md",
+                "file": "4. TODO.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3. API 의 개요"
+              "title": "4. TODO 의 개요"
             }
           },
           {
@@ -196,8 +196,8 @@
   },
   "active": "9a4bd2dbd4ba11f2",
   "lastOpenFiles": [
-    "4. TODO.md",
     "3. API.md",
+    "4. TODO.md",
     "1. 기획.md",
     "운영.md",
     "제품 정보 검색 링크.md",
