@@ -1038,12 +1038,12 @@
         {
           "label": "Fragment 1",
           "language": "sh",
-          "value": "// 윈도우 퍼플웍스 빌드\ncd C:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\Build\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived --network OP --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject\n\n// 맥 퍼플웍스 빌드\ncd /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/Build\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" -c Development /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject --network RC\n--- or ---\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" --client-config=Shipping --xcode-app-path=/Applications/Xcode.app -o \"/Users/ncsoft/Downloads\" /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject\n\n// 맥 플랫폼sdk 빌드\n/Users/ncsoft/Documents/ue_engine/UE_5.4/Engine/Build/BatchFiles/RunUAT.sh \\\nBuildCookRun \\\n-nocompile \\\n-nocompileeditor \\\n-targetplatform=IOS \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\n-compressed \\\n-noP4 \\\n-cook \\\n-stage \\\n-allmaps \\\n-archive \\\n-package \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-clientconfig=Shipping \\\n-distribution \\\n-nodebuginfo\n\n// Editor needs to be built first. 에러가 나오면 nocompileeditor를 빼고 아래 플래그 추가\n-editor \\\n\n// 맥 플랫폼sdk build.py\ncd /Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/Build\n./make_venv.sh\t// 최초 한번\nvenv/bin/activate;python build.py platform --IOS engine /Users/ncsoft/Documents/ue_engine/UE_5.4 --client-config=Shipping --xcode-app-path=/Applications/Xcode.app -o /Users/ncsoft/Downloads /Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\n\n// ipa 만들기\nxcodebuild -exportArchive \\\n-archivePath \"/Users/ncsoft/Downloads/IOS/SampleProject ~\" \\\n-exportPath \"/Users/ncsoft/Downloads/IOS\" \\\n-exportOptionsPlist \"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/Build/IOS/ExportOptions-AdHoc.plist\" \\\n-allowProvisioningUpdates"
+          "value": "// 윈도우 퍼플웍스 빌드\ncd C:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\Build\npython build.py platform --Win64 engine \"C:\\\\Program Files\\\\Epic Games\\\\UE_4.27\" --client-config Development -o C:\\Users\\oqkwon92\\Downloads\\Binaries\\Archived --network RC --store Win64 c:\\Users\\oqkwon92\\Documents\\purpleworks-sdk-unreal\\SampleProject.uproject\n\n// 맥 퍼플웍스 빌드\ncd /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/Build\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" -c Development /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject --network RC\n--- or ---\npython build.py platform --IOS engine \"/Users/ncsoft/Documents/ue_engine/544\" --client-config=Shipping --xcode-app-path=/Applications/Xcode.app -o \"/Users/ncsoft/Downloads\" /Users/ncsoft/Documents/NCSOFT/purpleworks-sdk-unreal/SampleProject.uproject\n\n// 맥 플랫폼sdk 빌드\n/Users/ncsoft/Documents/ue_engine/UE_5.4/Engine/Build/BatchFiles/RunUAT.sh \\\nBuildCookRun \\\n-nocompile \\\n-nocompileeditor \\\n-targetplatform=IOS \\\n-project=\"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\" \\\n-build \\\n-compressed \\\n-noP4 \\\n-cook \\\n-stage \\\n-allmaps \\\n-archive \\\n-package \\\n-archivedirectory=\"/Users/ncsoft/Downloads\" \\\n-clientconfig=Shipping \\\n-distribution \\\n-nodebuginfo\n\n// Editor needs to be built first. 에러가 나오면 nocompileeditor를 빼고 아래 플래그 추가\n-editor \\\n\n// 맥 플랫폼sdk build.py\ncd /Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/Build\n./make_venv.sh\t// 최초 한번\nvenv/bin/activate;python build.py platform --IOS engine /Users/ncsoft/Documents/ue_engine/UE_5.4 --client-config=Shipping --xcode-app-path=/Applications/Xcode.app -o /Users/ncsoft/Downloads /Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/SampleProject.uproject\n\n// ipa 만들기\nxcodebuild -exportArchive \\\n-archivePath \"/Users/ncsoft/Downloads/IOS/SampleProject ~\" \\\n-exportPath \"/Users/ncsoft/Downloads/IOS\" \\\n-exportOptionsPlist \"/Users/ncsoft/Documents/NCSOFT/nc-platform-sdk-unreal/Build/IOS/ExportOptions-AdHoc.plist\" \\\n-allowProvisioningUpdates"
         }
       ],
       "id": "kE7XNOCO",
       "createdAt": 1762766739004,
-      "updatedAt": 1771577235896
+      "updatedAt": 1773967971768
     },
     {
       "isDeleted": false,
@@ -1056,12 +1056,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());"
+          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 모바일 화면 스케일\nPWSDK.PCUIScale 1"
         }
       ],
       "id": "godlKsdc",
       "createdAt": 1764142062528,
-      "updatedAt": 1765953599969
+      "updatedAt": 1773969711158
     },
     {
       "isDeleted": false,
