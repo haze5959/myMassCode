@@ -1056,12 +1056,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 모바일 화면 스케일\nPWSDK.PCUIScale 1"
+          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 모바일 화면 스케일\nPWSDK.PCUIScale 1\n\n// 퍼플웍스 API 추가는 아래 PR 참고\n/projects/PURPLEWORKS/repos/purpleworks-sdk-unreal/pull-requests/207/overview"
         }
       ],
       "id": "godlKsdc",
       "createdAt": 1764142062528,
-      "updatedAt": 1773969711158
+      "updatedAt": 1774257795670
     },
     {
       "isDeleted": false,
@@ -1138,20 +1138,20 @@
     {
       "isDeleted": false,
       "isFavorites": false,
-      "folderId": "t_YmPtNL",
+      "folderId": "ks-J6vzL",
       "tagsIds": [],
       "description": null,
-      "name": "...",
+      "name": "PostgreSQL",
       "content": [
         {
           "label": "Fragment 1",
-          "language": "plain_text",
-          "value": "애플 샌드박스 테스트 계정\nID: oqkwon92.ncsoft@ncsoft.com\nPW: ASqwer!23"
+          "language": "markdown",
+          "value": "# 백업\npg_dump -U [사용자명] -F c -d [데이터베이스명] -f backup_file.dump\n\n# 복구 방법\npg_restore -U [사용자명] -d [데이터베이스명] backup_file.dump\n\n# 비밀번호 입력 생략하기\n자동화(Crontab 등)를 하려면 비밀번호 입력창이 뜨지 않아야 합니다. 이럴 땐 .pgpass 파일을 사용하세요.\n사용자 홈 디렉토리에 .pgpass 파일 생성\n형식 입력: hostname:port:database:username:password\n권한 변경: chmod 0600 ~/.pgpass (필수!)\n\n# 자동 백업 스크립트\n```sh\n#!/bin/bash\nBACKUP_DIR=\"/path/to/backups\"\nDB_NAME=\"my_database\"\nDATE=$(date +%Y%m%d_%H%M%S)\n\n# 백업 실행\npg_dump -U username -F c -d $DB_NAME -f $BACKUP_DIR/db_backup_$DATE.dump\n\n# 7일이 지난 오래된 백업 삭제 (용량 관리)\nfind $BACKUP_DIR -type f -mtime +7 -name \"*.dump\" -delete\n```"
         }
       ],
-      "id": "i8uQLr91",
-      "createdAt": 1773980448900,
-      "updatedAt": 1773980463176
+      "id": "S2R99SBT",
+      "createdAt": 1774230356625,
+      "updatedAt": 1774254203073
     }
   ],
   "tags": []
