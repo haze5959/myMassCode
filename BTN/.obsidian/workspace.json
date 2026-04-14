@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "제품 정보 검색 링크.md",
+                "file": "4. TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "제품 정보 검색 링크"
+              "title": "4. TODO"
             }
           }
         ],
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "제품 정보 검색 링크.md",
+                "file": "4. TODO.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "제품 정보 검색 링크 의 개요"
+              "title": "4. TODO 의 개요"
             }
           },
           {
@@ -211,16 +211,16 @@
   },
   "active": "7e10194583b468cf",
   "lastOpenFiles": [
-    "4. TODO.md",
     "1. 기획.md",
-    "2. ERD.md",
+    "4. TODO.md",
     "피드백.md",
+    "3. API.md",
     "제품 정보 검색 링크.md",
+    "2. ERD.md",
     "운영.md",
     "테스트 바코드.md",
     "탑 백 깨부수기.md",
     "5. 세금 및 정부 지원.md",
-    "3. API.md",
     "ddns_log.txt",
     "무제.canvas",
     "무제 3.base",
