@@ -106,6 +106,16 @@
       "id": "ks-J6vzL",
       "createdAt": 1773842586362,
       "updatedAt": 1773842594024
+    },
+    {
+      "name": "AI",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "plain_text",
+      "id": "bzLvAHeC",
+      "createdAt": 1778425281350,
+      "updatedAt": 1778425290874
     }
   ],
   "snippets": [
@@ -1152,6 +1162,24 @@
       "id": "S2R99SBT",
       "createdAt": 1774230356625,
       "updatedAt": 1774254203073
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "bzLvAHeC",
+      "tagsIds": [],
+      "description": null,
+      "name": "프롬프트",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "# RULES.md 개선시키기\nRULES.md 내용을 보충하고 개선시키려고 해 프로젝트 전반적으로 전부 천천히 다시 읽어보고 AI가 매번 새 세션에서 구동될때 안전정으로 프로젝트의 전반적인 구조와 규칙들을 숙지할 수 있게 내용을 보충 및 개선시켜줘 그리고 토큰 소모량을 줄이기 위해 RULES.md는 영어로 작성해줘"
+        }
+      ],
+      "id": "IFwWV5dg",
+      "createdAt": 1778425292987,
+      "updatedAt": 1778425339728
     }
   ],
   "tags": []
