@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MD 다이어그램.md",
+                "file": "MD 다이어그램 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MD 다이어그램"
+              "title": "MD 다이어그램 1"
             }
           }
         ]
@@ -185,6 +185,10 @@
   },
   "active": "dfdedb97be954949",
   "lastOpenFiles": [
-    "MD 다이어그램 1.md"
+    "앵커.md",
+    "MD 다이어그램 1.md",
+    "아이디어 뱅크.md",
+    "2026-02-02.md",
+    "MD 다이어그램.md"
   ]
 }

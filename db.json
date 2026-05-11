@@ -1056,12 +1056,12 @@
         {
           "label": "Fragment 1",
           "language": "plain_text",
-          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 모바일 화면 스케일\nPWSDK.PCUIScale 1\n\n// 퍼플웍스 API 추가는 아래 PR 참고\n/projects/PURPLEWORKS/repos/purpleworks-sdk-unreal/pull-requests/207/overview"
+          "value": "// unreal 로그\nSDK_LOG(Error, TEXT(\"OQOQOQ: %s\"), Widget->GetInputText().ToString());\n\n// 모바일 화면 스케일\nPWSDK.PCUIScale 1\n\n// 퍼플웍스 API 추가는 아래 PR 참고\n/projects/PURPLEWORKS/repos/purpleworks-sdk-unreal/pull-requests/207/overview\n\n// 퍼플웍스 메이커\nmaker.exe -i a-0hmyepjlh19g8b07l -c qa -g iE10lSMsbZrVIphD0BXveOoLMMCBLtfoO8ni1OS7H0Hl6VzxRbaHNULktItMi8l4 -b A0HMYEPJLH19G8B07L_RC_QA_01 -v 1.0.0 -n rc\n// 라이브\nmaker.exe -i a-0maf55owym96dc454 -c qa -g hq5KGQxqblnXDcPmKjZuX2AjzlIBU1E6OSQcCi59DTr0Bhut2YYCF4A25NrdtLa1 -b A0MAF55OWYM96DC454_LIVE_QA_01 -v 1.0.0\n// 라이브 (CDN 테스트용) 트리니티 Win-Purple\nmaker.exe -i a-08mxjncm51nj9occ3 -c dev -g hq5KGQxqblnXDcPmKjZuX2AjzlIBU1E6OSQcCi59DTr0Bhut2YYCF4A25NrdtLa1 -b A08MXJNCM51NJ9OCC3_LIVE_DEV_02 -v 1.0.0\n"
         }
       ],
       "id": "godlKsdc",
       "createdAt": 1764142062528,
-      "updatedAt": 1774257795670
+      "updatedAt": 1776852047030
     },
     {
       "isDeleted": false,
