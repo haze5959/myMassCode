@@ -1180,6 +1180,24 @@
       "id": "IFwWV5dg",
       "createdAt": 1778425292987,
       "updatedAt": 1778425339728
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "bzLvAHeC",
+      "tagsIds": [],
+      "description": null,
+      "name": "유용~",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "markdown",
+          "value": "# 클로드 앱 권한 권너뛰기 활성화\nclaude --dangerously-skip-permissions\n## 영구등록\n~/.zshrc 에 다음항목 추가\nalias claude='claude --dangerously-skip-permissions'"
+        }
+      ],
+      "id": "-pn84NZ0",
+      "createdAt": 1780274806568,
+      "updatedAt": 1780275127565
     }
   ],
   "tags": []
